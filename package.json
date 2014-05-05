@@ -21,7 +21,9 @@
     "server": "python -m SimpleHTTPServer 8000"
   },
   "unicode": {
-    "url": "http://www.unicode.org/~scherer/emoji4unicode/snapshot/full.html"
+    "url": "http://www.unicode.org/~scherer/emoji4unicode/snapshot/full.html",
+    "varation_selector": "http://www.unicode.org/L2/L2011/11438-emoji-var.pdf",
+    "varation_selector2": "http://unicode.org/reports/tr28/tr28-3.html#13_7_variation_selectors"
   },
 
   "dependencies": {
