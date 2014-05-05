@@ -1,0 +1,37 @@
+{
+  "name": "emojify",
+  "version": "0.1.0",
+  "private": "true",
+
+  "main": "emojify.js",
+
+  "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
+  "description": "Unicode to emoji conversion",
+  "homepage": "https://github.com/roulotte/emojify",
+  "license": "MIT",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roulotte/emojify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roulotte/emojify/issues"
+  },
+  "scripts": {
+    "server": "python -m SimpleHTTPServer 8000"
+  },
+  "unicode": {
+    "url": "http://www.unicode.org/~scherer/emoji4unicode/snapshot/full.html"
+  },
+
+  "dependencies": {
+    "emojize": "0.1.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-exec": "~0.4.5",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-git": "~0.2.8"
+  }
+}
