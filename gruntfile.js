@@ -75,8 +75,24 @@ module.exports = function (grunt) {
     }, done);
   });
 
+
+  function copyAndKeepSymlink(src, dest) {
+    if (fs.lstatSync(src).isSymbolicLink()) {
+      grunt.log.debug(src, "is a symbolic link");
+      if (grunt.file.exists(dest)) {
+        grunt.file.delete(dest);
+      }
+      src = path.resolve(path.dirname(dest), fs.readlinkSync(src));
+      fs.symlinkSync(src, dest, 'file');
+      return true;
+    } else {
+      grunt.file.copy(src, dest);
+      return false;
+    }
+  }
+
   grunt.registerTask('update:gemoji', "Updating emojis from Github Official repository", function() {
-    var non_standard = 0, named_list = [];
+    var named_list = [], named_nonstandard_list = [];
     var unicode_images = grunt.file.expand({
       cwd: GEMOJI_SRC
     }, GEMOJI_UNICODE_GLOB);
@@ -86,7 +102,9 @@ module.exports = function (grunt) {
 
     grunt.log.ok(unicode_images.length, "images detected");
     unicode_images.forEach(function(image) {
-      grunt.file.copy(path.join(GEMOJI_SRC, image), image);
+      var src  = path.join(GEMOJI_SRC, image),
+          dest = path.join(image);
+      copyAndKeepSymlink(src, dest);
     });
     grunt.log.ok();
 
@@ -98,20 +116,17 @@ module.exports = function (grunt) {
     grunt.log.ok(github_images.length, "images detected");
     github_images.forEach(function(image) {
       named_list.push(path.basename(image, ".png"));
-
-      if (fs.lstatSync(path.join(GEMOJI_SRC, image)).isSymbolicLink()) {
-        var dest = path.join(path.dirname(image), fs.readlinkSync(path.join(GEMOJI_SRC, image)))
-        grunt.file.delete(image);
-        fs.symlinkSync(path.relative(IMAGES_DEST, dest), image, 'file');
-      } else {
-        non_standard++;
-        grunt.file.copy(path.join(GEMOJI_SRC, image), image);
-      }
+      var src  = path.join(GEMOJI_SRC, image),
+          dest = path.join(image);
+          if (!copyAndKeepSymlink(src, dest)) {
+            named_nonstandard_list.push(path.basename(image, ".png"));
+          }
     });
-    grunt.log.ok(non_standard, "non standard emojis were detected");
+    grunt.log.ok(named_nonstandard_list.length, "non standard emojis were detected");
     grunt.log.ok();
 
     grunt.config.set("emoji_named_list", named_list.join(","));
+    grunt.config.set("emoji_nonstandard_list", named_nonstandard_list.join(","));
   });
 
 
