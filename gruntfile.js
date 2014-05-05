@@ -1,4 +1,5 @@
-var path = require('path');
+var path = require('path'),
+    fs   = require('fs');
 
 var emojize = require('emojize/lib/emoji');
 
@@ -6,7 +7,7 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  GEMOJI_DEST = path.join(".", "node_modules", "gemoji");
+  GEMOJI_SRC = path.join(".", "node_modules", "gemoji");
   IMAGES_DEST = path.join(".", "images" ,"emoji");
 
   GEMOJI_IMAGES_GLOB = [ path.join("images", "emoji", "*.png") ];
@@ -21,7 +22,7 @@ module.exports = function (grunt) {
                ' * Copyright (c) Benoit Charbonnier <%= grunt.template.today("yyyy") %>\n' +
                ' */',
       gemoji: {
-        src: GEMOJI_DEST
+        src: GEMOJI_SRC
       }
     },
     uglify: {
@@ -42,36 +43,42 @@ module.exports = function (grunt) {
           directory: '<%= meta.gemoji.src %>'
         }
       }
-    },
-
-    gitreset: {
-      gemoji: {
-        options: {
-          mode: "hard"
-        },
-        files: '<%= meta.gemoji %>'
-      }
-    },
-
-    gitpull: {
-      gemoji: {
-        config: { },
-        files: '<%= meta.gemoji %>'
-      }
     }
   });
 
   var udpate_deps;
-  if (grunt.file.exists(GEMOJI_DEST)) {
+  if (grunt.file.exists(GEMOJI_SRC)) {
     update_deps = ["gitreset:gemoji", "gitpull:gemoji"];
   } else {
     update_deps = ["gitclone:gemoji"];
   }
 
+
+  grunt.registerTask('gitreset:gemoji', "Reset Gemoji repository", function() {
+    var repo_location = grunt.config.get("meta.gemoji.src");
+    var done = this.async();
+
+    grunt.util.spawn({
+      cmd: "git",
+      args: ["reset", "--hard"],
+      opts: {cwd: repo_location, stdio: grunt.option("verbose") ? 'inherit': 'ignore'}
+    }, done);
+  });
+
+  grunt.registerTask('gitpull:gemoji', "Pulling new code for Gemoji repository", function() {
+    var repo_location = grunt.config.get("meta.gemoji.src");
+    var done = this.async();
+    grunt.util.spawn({
+      cmd: "git",
+      args: ["pull", "origin", "master"],
+      opts: {cwd: repo_location, stdio: grunt.option("verbose") ? 'inherit': 'ignore'}
+    }, done);
+  });
+
   grunt.registerTask('update:gemoji', "Updating emojis from Github Official repository", function() {
     var non_standard = 0, named_list = [];
     var unicode_images = grunt.file.expand({
-      cwd: GEMOJI_DEST
+      cwd: GEMOJI_SRC
     }, GEMOJI_UNICODE_GLOB);
 
     grunt.log.subhead("Copying emoji images from Github Official repo");
@@ -79,23 +86,26 @@ module.exports = function (grunt) {
 
     grunt.log.ok(unicode_images.length, "images detected");
     unicode_images.forEach(function(image) {
-      grunt.file.copy(path.join(GEMOJI_DEST, image), image);
+      grunt.file.copy(path.join(GEMOJI_SRC, image), image);
     });
     grunt.log.ok();
 
     var github_images = grunt.file.expand({
-      cwd: GEMOJI_DEST
+      cwd: GEMOJI_SRC
     }, GEMOJI_IMAGES_GLOB);
 
     grunt.log.writeln("Copying standard named emojis...");
     grunt.log.ok(github_images.length, "images detected");
     github_images.forEach(function(image) {
       named_list.push(path.basename(image, ".png"));
-      if (grunt.file.isLink(image)) {
-        grunt.file.copy(grunt.file.read(path.join(GEMOJI_DEST, image)), image);
+
+      if (fs.lstatSync(path.join(GEMOJI_SRC, image)).isSymbolicLink()) {
+        var dest = path.join(path.dirname(image), fs.readlinkSync(path.join(GEMOJI_SRC, image)))
+        grunt.file.delete(image);
+        fs.symlinkSync(path.relative(IMAGES_DEST, dest), image, 'file');
       } else {
         non_standard++;
-        grunt.file.copy(path.join(GEMOJI_DEST, image), image);
+        grunt.file.copy(path.join(GEMOJI_SRC, image), image);
       }
     });
     grunt.log.ok(non_standard, "non standard emojis were detected");
