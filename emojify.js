@@ -112,6 +112,19 @@
         return emojis;
       }
 
+      function typeahead(text, limit) {
+        limit = limit || 10;
+        return namedEmoji.map(function(emoji) {
+          if (emoji.indexOf(text) === 0) {
+            return {
+              "name": emoji,
+              "emoji": ':' + emoji + ':'
+            };
+          }
+          return false;
+        }).filter(function(item) { return item !== false; }).slice(0, limit);
+      }
+
       function replace(text, replacer) {
         if (!replacer) {
           replacer = defaultConfig.replacer;
@@ -134,6 +147,7 @@
         "defaultConfig": defaultConfig,
         "parse": parse,
         "replace": replace,
+        "typeahead": typeahead,
         "isemoji": function(text) {
           return text.test(emoticons.named);
         }
