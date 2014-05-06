@@ -78,12 +78,16 @@ module.exports = function (grunt) {
 
   function copyAndKeepSymlink(src, dest) {
     if (fs.lstatSync(src).isSymbolicLink()) {
-      grunt.log.debug(src, "is a symbolic link");
+      var src_path, dest_dir = path.dirname(dest);
       if (grunt.file.exists(dest)) {
         grunt.file.delete(dest);
       }
-      src = path.resolve(path.dirname(dest), fs.readlinkSync(src));
-      fs.symlinkSync(src, dest, 'file');
+      src_path = fs.readlinkSync(src);
+      if (!grunt.file.isPathAbsolute(src_path)) {
+        src_path = path.join('.', src_path) || '.';
+      }
+      grunt.log.debug("Symbolic link creation", dest, "->", src_path);
+      fs.symlinkSync(src_path, dest, 'file');
       return true;
     } else {
       grunt.file.copy(src, dest);
