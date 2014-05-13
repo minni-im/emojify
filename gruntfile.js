@@ -1,5 +1,7 @@
-var path = require('path'),
-    fs   = require('fs');
+var path    = require('path'),
+    fs      = require('fs');
+
+var request = require('request');
 
 var emojize = require('emojize/lib/emoji');
 
@@ -12,6 +14,10 @@ module.exports = function (grunt) {
 
   GEMOJI_IMAGES_GLOB = [ path.join("images", "emoji", "*.png") ];
   GEMOJI_UNICODE_GLOB = [ path.join("images", "emoji", "unicode", "*.png") ];
+
+  TWITTER_EMOJI_URL = "https://abs.twimg.com/emoji/v1/72x72/";
+  TWITTER_DIR = path.join("images", "twitter");
+  TWITTER_UNICODE_DIR = path.join(TWITTER_DIR, "unicode");
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -167,7 +173,56 @@ module.exports = function (grunt) {
     grunt.log.ok();
   });
 
-  grunt.registerTask('update', flatten([ update_deps, 'update:gemoji', 'update:emojify.js' ]));
+
+  grunt.registerTask('update:twitter-unicode', "Retrieve twitter emojis", function() {
+    //this.requires("update:gemoji");
+    var done = this.async();
+    var unicode_images = grunt.file.expand({
+      cwd: GEMOJI_SRC
+    }, GEMOJI_UNICODE_GLOB);
+
+    unicode_images.forEach(function(image, index) {
+      var src      = path.join(GEMOJI_SRC, image),
+          filename = path.basename(image),
+          real_filename = filename;
+
+      if (fs.lstatSync(src).isSymbolicLink()) {
+        real_filename = path.basename(fs.readlinkSync(src));
+      }
+      request.get({encoding: null, url: TWITTER_EMOJI_URL+filename}, function(error, response, body) {
+        grunt.log.writeln("Downloading emoji", filename);
+        if (response.statusCode !== 404) {
+          grunt.file.write(path.join(TWITTER_UNICODE_DIR, real_filename), body);
+          if (filename !== real_filename) {
+            var symlink = path.join(TWITTER_UNICODE_DIR, filename);
+            grunt.log.writeln("Symlink creation", filename, real_filename);
+            if (grunt.file.exists(symlink)) {
+              grunt.file.delete(symlink);
+            }
+            fs.symlinkSync(real_filename, symlink);
+          }
+        }
+        if(index === unicode_images.length) {
+          done(true);
+        }
+      });
+    });
+  });
+
+  grunt.registerTask('update:twitter-named', "Create named emojis alias", function() {
+    var github_images = grunt.file.expand({
+      cwd: GEMOJI_SRC
+    }, GEMOJI_IMAGES_GLOB);
+
+    github_images.forEach(function(image) {
+      var src  = path.join(GEMOJI_SRC, image),
+          dest = path.join(TWITTER_DIR, path.basename(image));
+      copyAndKeepSymlink(src, dest);
+    });
+  });
+
+  grunt.registerTask('update:twitter', ['update:twitter-unicode', 'update:twitter-named']);
+  grunt.registerTask('update', flatten([ update_deps, 'update:gemoji', 'update:emojify.js', 'update:twitter']));
   grunt.registerTask('release', [ 'update', 'uglify:release' ]);
   grunt.registerTask('default', [ 'release' ]);
 };
