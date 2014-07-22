@@ -1,15 +1,12 @@
 {
   "name": "emojify",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": "true",
-
   "main": "emojify.js",
-
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
-  "description": "Unicode to emoji conversion",
+  "description": "Emoji for the win. Name and unicode conversions",
   "homepage": "https://github.com/roulotte/emojify",
   "license": "MIT",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/roulotte/emojify.git"
@@ -23,18 +20,19 @@
   "unicode": {
     "url": "http://www.unicode.org/~scherer/emoji4unicode/snapshot/full.html",
     "varation_selector": "http://www.unicode.org/L2/L2011/11438-emoji-var.pdf",
-    "varation_selector2": "http://unicode.org/reports/tr28/tr28-3.html#13_7_variation_selectors"
+    "varation_selector2": "http://unicode.org/reports/tr28/tr28-3.html#13_7_variation_selectors",
+    "hangout_from_gmail": "https://ssl.gstatic.com/chat/emoji/emoji-d3bd0af9cdabcdfe9dc3f0666041fd06.png"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "load-grunt-tasks": "~0.2.1",
-    "grunt-exec": "~0.4.5",
-    "grunt-contrib-uglify": "~0.2.4",
-    "grunt-git": "~0.2.8",
-    "emojize": "0.1.0",
-    "request": "2.34.0"
+    "gulp": "~3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-git": "~0.4.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "~0.1.0",
+    "gulp-uglify": "~0.3.1",
+    "gulp-util": "~3.0.0",
+    "request": "2.34.0",
+    "through2": "~0.5.1"
   }
 }
