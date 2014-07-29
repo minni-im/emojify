@@ -2,21 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="emojify.min.js"></script>
   </head>
   <body>
-    <script src="/emojify.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-      console.log(emojify);
-
-      function emojiteme(text, action) {
-        console.info(text);
-        console.log(emojify[action](text));
-      }
-
-      emojiteme("This is a :8ball: test with some :fries: ! :+1: and a smiley :) ", "parse");
-      emojiteme(":fries: :fries: :fries:", "parse");
-
-      emojiteme(":fries: :fries: :fries:", "replace");
+      console.log(emojify.find_by_alias('relaxed').toString());
+      console.log(emojify.find_by_alias('8ball').constructor.toString());
     </script>
   </body>
 </html>
