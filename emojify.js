@@ -42,7 +42,7 @@ var Character = function Character(name) {
     'get': function() {
       return !this.raw;
     }
-  })
+  });
 
   this.tags = [];
 
@@ -93,7 +93,7 @@ function parse_data_file() {
       unicodes.forEach(function(u) {
         emoji.add_unicode_alias(u);
 
-        var no_varation_cp = codepoints(u).filter(function(cp) { return cp != VARIATION_SELECTOR_16 }),
+        var no_varation_cp = codepoints(u).filter(function(cp) { return cp != VARIATION_SELECTOR_16; }),
             no_varation = str_from_codepoints(no_varation_cp);
         if (no_varation !== u) {
           emoji.add_unicode_alias(no_varation);
@@ -105,7 +105,7 @@ function parse_data_file() {
       return emoji;
     });
   });
-};
+}
 
 
 var emojify = {
@@ -151,7 +151,7 @@ var emojify = {
    * @return emoji or undefined if missing
    */
   find_by_alias: function(name) {
-    this.all;
+    this.all && void(0);
     return by_name[name];
   },
 
@@ -161,7 +161,7 @@ var emojify = {
    * @return emoji or undefined if missing
    */
   find_by_unicode: function(unicode) {
-    this.all;
+    this.all && void(0);
     return by_unicode[unicode];
   }
 };

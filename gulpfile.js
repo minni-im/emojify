@@ -38,7 +38,7 @@ var verbose = gutil.env.verbose || false,
     };
 
 gulp.task('gemoji:clone', function(cb) {
-    git.clone(GEMOJI_GITHUB_REPO, { args: GEMOJI_SRC + " --quiet" }, cb);
+    git.clone(GEMOJI_GITHUB_REPO, { args: GEMOJI_SRC + "" }, cb);
 });
 
 gulp.task('gemoji:reset', function(cb) {
@@ -160,11 +160,20 @@ gulp.task('gemoji:git', gemoji_deps);
 
 gulp.task('build:images', ['gemoji:git', 'images:build', 'build']);
 gulp.task('build:lib', ['gemoji:git', 'db:copy'], function() {
-   gulp.src('./emojify.js')
-    .pipe(browserify({
-        'standalone': "emojify"
-    }))
-    .pipe(uglify())
-    .pipe(rename("emojify.min.js"))
-    .pipe(gulp.dest('.'));
+   return gulp.src('./emojify.js')
+        .pipe(browserify({
+            'standalone': "emojify"
+        }))
+        .pipe(uglify())
+        .pipe(rename("emojify.min.js"))
+        .pipe(gulp.dest('.'));
+});
+
+gulp.task('copy:assets', function() {
+    var dest = gutil.env.dest || false;
+    if (!dest) {
+        throw new gutil.PluginError("emojify", "You have to specify a destination folder. Please use the --dest option");
+    }
+    return gulp.src('./images/**/*.png')
+        .pipe(gulp.dest(dest));
 });
