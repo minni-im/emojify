@@ -141,9 +141,10 @@ function fetch_images(type) {
 }
 
 var gemoji_deps = fs.existsSync(GEMOJI_SRC) ? ['gemoji:reset', 'gemoji:pull'] : ['gemoji:clone'];
-gemoji_deps.push('images:clean');
+var images_deps = [].concat(gemoji_deps);
+images_deps.push('images:clean');
 
-gulp.task('images:build', gemoji_deps, function() {
+gulp.task('images:build', images_deps, function() {
     return gulp.src(GEMOJI_SRC + '/images/**/*.png')
         .pipe(fetch_images("TWITTER"))
         .pipe(fetch_images("HANGOUT"))
@@ -155,7 +156,10 @@ gulp.task('db:copy', function() {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('build', [/*'images:build',*/ 'db:copy'], function() {
+gulp.task('gemoji:git', gemoji_deps);
+
+gulp.task('build:images', ['gemoji:git', 'images:build', 'build']);
+gulp.task('build:lib', ['gemoji:git', 'db:copy'], function() {
    gulp.src('./emojify.js')
     .pipe(browserify({
         'standalone': "emojify"
