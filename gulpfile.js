@@ -83,21 +83,8 @@ var folders = {
 
 var name_processors = {
     TWITTER: function(name) {
-        // unicode variation management
-        if (name.indexOf(VARIATION_SELECTOR_16)) {
-            name = name.replace('-'+VARIATION_SELECTOR_16, '');
-        }
-
         // weird twitter behavior, leading 0 are stripped
         name = name.replace(/^0+/, '');
-        return name;
-    },
-
-    HANGOUT: function(name) {
-        // unicode variation management
-        if (name.indexOf(VARIATION_SELECTOR_16)) {
-            name = name.replace('-'+VARIATION_SELECTOR_16, '');
-        }
         return name;
     }
 };
@@ -115,6 +102,7 @@ function fetch_images(type) {
         log("processing", colors.cyan(name));
         if (name.indexOf("unicode") === 0) {
             name = name.split('/').pop();
+            p_name = name;
             name_processors[type] && (p_name = name_processors[type](name));
 
             request.get({ encoding: null, url: images_urls[type] + p_name }, function(error, response, body) {
@@ -158,13 +146,17 @@ gulp.task('db:copy', function() {
 
 gulp.task('gemoji:git', gemoji_deps);
 
-gulp.task('build:images', ['gemoji:git', 'images:build', 'build']);
+gulp.task('build:images', ['gemoji:git', 'images:build']);
 gulp.task('build:lib', ['gemoji:git', 'db:copy'], function() {
    return gulp.src('./emojify.js')
         .pipe(browserify({
             'standalone': "emojify"
         }))
-        .pipe(uglify())
+        .pipe(uglify({
+          mangle: {
+            except: ['Character']
+          }
+        }))
         .pipe(rename("emojify.min.js"))
         .pipe(gulp.dest('.'));
 });

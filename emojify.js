@@ -46,13 +46,13 @@ var Character = function Character(name) {
 
   this.tags = [];
 
-  Object.defineProperty(this, 'image_path', {
+  Object.defineProperty(this, 'image_filename', {
     'enumerable': true,
     'get': function() {
       if (this.custom) {
         return this.name + '.png';
       } else {
-        return 'unicode/' + this.hex_inspect() + '.png';
+        return 'unicode/' + this.hex_inspect().replace('-'+VARIATION_SELECTOR_16.toString(16), '') + '.png';
       }
     }
   });
@@ -85,20 +85,20 @@ Character.prototype.hex_inspect = function() {
 function parse_data_file() {
   db.forEach(function(raw_emoji) {
     var emoji = emojify.create(undefined, function(emoji) {
+      var raw = raw_emoji.emoji, variation_16;
       raw_emoji.aliases.forEach(function(a) {
         emoji.add_alias(a);
       });
 
-      var unicodes = (raw_emoji.emoji ? [raw_emoji.emoji] : []).concat(raw_emoji.unicodes || []);
-      unicodes.forEach(function(u) {
-        emoji.add_unicode_alias(u);
-
-        var no_varation_cp = codepoints(u).filter(function(cp) { return cp != VARIATION_SELECTOR_16; }),
-            no_varation = str_from_codepoints(no_varation_cp);
-        if (no_varation !== u) {
-          emoji.add_unicode_alias(no_varation);
+      if (raw) {
+        emoji.add_unicode_alias(raw);
+        variation_16 = str_from_codepoints(codepoints(raw).filter(function(cp) {
+          return cp != VARIATION_SELECTOR_16; }).concat([VARIATION_SELECTOR_16]));
+        if (raw !== variation_16) {
+          emoji.add_unicode_alias(variation_16);
         }
-      });
+      }
+
       raw_emoji.tags.forEach(function(t) {
         emoji.add_tag(t);
       });
