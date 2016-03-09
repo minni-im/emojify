@@ -15,6 +15,7 @@
     "url": "https://github.com/minni-im/emojify/issues"
   },
   "scripts": {
+    "stats": "node ./scripts/stats.js",
     "build": "sh ./scripts/generate.sh"
   },
   "unicode": {
