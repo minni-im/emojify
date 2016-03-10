@@ -15,8 +15,10 @@
     "url": "https://github.com/minni-im/emojify/issues"
   },
   "scripts": {
+    "dictionnary": "sh ./scripts/dictionnary.sh",
     "stats": "node ./scripts/stats.js",
-    "build": "sh ./scripts/generate.sh"
+    "assets": "node ./scripts/assets.js",
+    "build": "npm run dictionnary && npm run assets && npm run stats"
   },
   "unicode": {
     "source-utf8": "http://www.unicode.org/Public/UNIDATA/EmojiSources.txt",
@@ -29,7 +31,9 @@
   "dependencies": {},
   "devDependencies": {
     "cli-table": "^0.3.1",
+    "colors": "^1.1.2",
     "glob": "^7.0.3",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "rimraf": "^2.5.2"
   }
 }
