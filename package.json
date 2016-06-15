@@ -2,7 +2,7 @@
   "name": "emojify",
   "version": "2.0.0",
   "private": "true",
-  "main": "emojify.js",
+  "main": "lib/emojify.js",
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
   "description": "Emoji for the win. Name and unicode conversions",
   "homepage": "https://github.com/minni-im/emojify",
@@ -16,9 +16,8 @@
   },
   "scripts": {
     "dictionnary": "sh ./scripts/dictionnary.sh",
-    "stats": "node ./scripts/stats.js",
-    "assets": "node ./scripts/assets.js",
-    "build": "npm run dictionnary && npm run assets && npm run stats"
+    "generate": "node ./scripts/generate.js",
+    "build": "npm run dictionnary && npm run generate"
   },
   "unicode": {
     "source-utf8": "http://www.unicode.org/Public/UNIDATA/EmojiSources.txt",
