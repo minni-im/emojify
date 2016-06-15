@@ -202,6 +202,7 @@ Promise.all(assets)
             // Injecting real objects;
             .replace("EMOJI_BY_NAMES", JSON.stringify(EMOJI_BY_NAMES))
             .replace("EMOJI_BY_UNICODE", JSON.stringify(EMOJI_BY_UNICODE))
+            .replace("EMOJI_BY_SURROGATES", JSON.stringify(EMOJI_BY_SURROGATES))
             .replace("EMOJI_ASCII", JSON.stringify(EMOJI_ASCII))
             .replace("RE_SHORTNAMES", RE_SHORTNAMES.join("|"))
         );
