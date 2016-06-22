@@ -3,46 +3,63 @@ const fs = require("fs");
 const path = require("path");
 const color = require("colors");
 
-const { entries } = require("./utils");
+const { entries, fileExists } = require("./utils");
 
 const DICTIONNARY = require("../emoji-source.json");
+const PROVIDERS = require("./providers.js");
+
+const ASSETS_DIR = path.join(__dirname, "..", "assets");
 
 const EMOJI_BY_NAMES = {};
 const EMOJI_BY_UNICODE = {};
 const EMOJI_BY_SURROGATES = {};
 const EMOJI_ASCII = {};
-const RE_SHORTNAMES = [];
+const PROVIDERS_MASKS = {};
 
 console.log("Building emojis info based on dictionnary".bold);
 
-for (const [name, emoji, images] of entries(DICTIONNARY)) {
-    const shortName = name.replace(/:/g, "");
-    const unicodes = emoji.unicode_alternates ? [
-        emoji.unicode_alternates
-    ] : [];
-    unicodes.push(emoji.unicode);
+for (const [name, emoji] of entries(DICTIONNARY)) {
+    const {
+        unicode,
+        unicode_alternates,
+        aliases_ascii,
+        shortname } = emoji;
 
-    EMOJI_BY_NAMES[shortName] = {
-        unicode: unicodes
-    }
-    unicodes.forEach(unicode =>  {
-        EMOJI_BY_UNICODE[unicode] = shortName;
+    const unicodes = unicode_alternates ? [
+        unicode_alternates
+    ] : [];
+    unicodes.unshift(unicode);
+
+    unicodes.forEach(code =>  {
+        EMOJI_BY_UNICODE[code] = shortname;
         EMOJI_BY_SURROGATES[String.fromCodePoint(
             ...unicode
                 .split("-")
                 .map(hex => `0x${hex}`)
         )] = unicode;
     });
-    RE_SHORTNAMES.push(shortName);
 
-    emoji.aliases_ascii.forEach(alias => {
-        EMOJI_ASCII[alias] = emoji.unicode;
+    aliases_ascii.forEach(alias => {
+        EMOJI_ASCII[alias] = unicode;
     });
+
+    let imageExists = 0;
+    PROVIDERS.forEach(({name: providerName, type}, index) => {
+        const mask = Math.pow(2, index);
+        if (fileExists(path.join(ASSETS_DIR, providerName, type, `${unicode}.${type}`))) {
+            imageExists |= mask;
+        }
+    });
+
+    EMOJI_BY_NAMES[shortname] = {
+        unicode: unicodes,
+        mask: imageExists
+    };
 }
 
-console.log("Number of emojis from dictionnary:", RE_SHORTNAMES.length);
+PROVIDERS.forEach(({name}, index) => PROVIDERS_MASKS[name] = Math.pow(2, index));
 
-console.log("Generating library file:".bold,  "emojify.js");
+console.log("Generating library file:".bold,  "lib/emojify.js");
 fs.writeFileSync(
     path.join(".", "lib", "emojify.js"),
     fs.readFileSync(
@@ -54,5 +71,5 @@ fs.writeFileSync(
     .replace("EMOJI_BY_UNICODE", JSON.stringify(EMOJI_BY_UNICODE))
     .replace("EMOJI_BY_SURROGATES", JSON.stringify(EMOJI_BY_SURROGATES))
     .replace("EMOJI_ASCII", JSON.stringify(EMOJI_ASCII))
-    .replace("RE_SHORTNAMES", RE_SHORTNAMES.join("|"))
+    .replace("PROVIDERS_MASKS", JSON.stringify(PROVIDERS_MASKS))
 );

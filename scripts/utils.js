@@ -6,6 +6,16 @@ module.exports = {
     createDir() {
         fs.mkdirSync(path.join.apply(null, arguments));
     },
+    
+    fileExists(path) {
+        try {
+            fs.accessSync(path);
+            return true;
+        } catch (exception) {
+            return false;
+        }
+    },
+
     entries: function* entries(obj) {
         for (let key of Object.keys(obj)) {
             yield [key, obj[key]];

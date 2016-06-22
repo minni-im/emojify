@@ -6,38 +6,10 @@ const rimraf = require("rimraf");
 const color = require("colors");
 
 const { entries, createDir, async, emoji } = require("./utils");
-
+const PROVIDERS = require("./providers");
 const DICTIONNARY = require("../emoji-source.json");
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
 const ASSETS = [];
-
-const PROVIDERS = [
-    {
-        name: "emojione",
-        type: "svg",
-        url(name) {
-            return `https://raw.githubusercontent.com/Ranks/emojione/master/assets/svg/${name}.svg`
-        }
-    },
-    {
-        name: "apple",
-        type: "png",
-        url(name) {
-            return `https://raw.githubusercontent.com/iamcal/emoji-data/master/img-apple-160/${name}.png`
-        }
-    },
-    {
-        name: "twitter",
-        type: "svg",
-        preProcessName(name) {
-            // Twitter is weirdly stripping leading 0...
-            return name.replace(/^0+/, "");
-        },
-        url(name) {
-            return `https://raw.githubusercontent.com/twitter/twemoji/gh-pages/2/svg/${name}.svg`
-        }
-    }
-];
 
 function createProviderFolders(provider) {
     createDir(__dirname, "..", "assets", provider);
