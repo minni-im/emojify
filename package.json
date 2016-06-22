@@ -16,8 +16,10 @@
   },
   "scripts": {
     "databases": "sh ./scripts/databases.sh",
+    "assets": "npm run databases && node ./scripts/assets.js",
     "generate": "node ./scripts/generate.js",
-    "build": "npm run databases && npm run generate"
+    "rebuild": "npm run assets && npm run generate",
+    "build": "npm run generate"
   },
   "unicode": {
     "source-utf8": "http://www.unicode.org/Public/UNIDATA/EmojiSources.txt",

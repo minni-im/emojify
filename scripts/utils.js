@@ -1,0 +1,35 @@
+"use strict";
+const fs = require("fs");
+const path = require("path");
+
+module.exports = {
+    createDir() {
+        fs.mkdirSync(path.join.apply(null, arguments));
+    },
+    entries: function* entries(obj) {
+        for (let key of Object.keys(obj)) {
+            yield [key, obj[key]];
+        }
+    },
+    async(makeGenerator) {
+        return function(...args) {
+            const generator = makeGenerator.apply(this, args);
+            function handle(result) {
+                if (result.done) {
+                    return result.value;
+                }
+                return result.value.then(
+                    res => handle(generator.next(res)),
+                    error => handle(generator.throw(error))
+                );
+            }
+            return handle(generator.next());
+        }
+    },
+    emoji(codepointsAsString) {
+        return String.fromCodePoint(...codepointsAsString
+            .split("-")
+            .map(codepoint => parseInt(codepoint, 16))
+        );
+    }
+}
