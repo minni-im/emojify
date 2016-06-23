@@ -1,8 +1,10 @@
-DATABASE="https://raw.githubusercontent.com/Ranks/emojione/master/emoji.json"
+#DATABASE="https://raw.githubusercontent.com/Ranks/emojione/master/emoji.json"
+DATABASE="https://raw.githubusercontent.com/iamcal/emoji-data/master/emoji.json"
+
 CATEGORY_DATABASE="http://www.unicode.org/emoji/charts/emoji-ordering.html"
 
 echo "Retrieving datasources"
-echo "+ Emoji dictionnary from emojione"
+echo "+ Emoji dictionnary from iamcal/emoji-data"
 curl -k -s $DATABASE -o emoji-source.json
 
 node <<EOF
