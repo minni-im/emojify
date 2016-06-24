@@ -1,7 +1,8 @@
 #DATABASE="https://raw.githubusercontent.com/Ranks/emojione/master/emoji.json"
 DATABASE="https://raw.githubusercontent.com/iamcal/emoji-data/master/emoji.json"
-
 CATEGORY_DATABASE="http://www.unicode.org/emoji/charts/emoji-ordering.html"
+
+UNICODE_EMOJI_LIST="http://www.unicode.org/emoji/charts/emoji-list.html"
 
 echo "Retrieving datasources"
 echo "+ Emoji dictionnary from iamcal/emoji-data"
@@ -16,35 +17,10 @@ EOF
 
 echo "+ Categories database"
 curl -k -s $CATEGORY_DATABASE -o emoji-category.html
-node <<EOF
-  "use strict";
-  const fs = require("fs");
-  const jsdom = require("jsdom").jsdom;
-  const source = fs.readFileSync("./emoji-category.html");
-  const categories = [];
-  const document = jsdom(source);
-
-  const rows = document.querySelectorAll("tr");
-  let current;
-  for (const row of rows) {
-    const container = row.firstElementChild;
-
-    switch (container.className) {
-      case "bighead":
-        const title = container.querySelector("a").textContent;
-        current = { title, emojis: [] };
-        categories.push(current);
-        break;
-      case "lchars":
-        const emojis = container.querySelectorAll("a");
-        current.emojis = [
-          ...current.emojis,
-          ...[...emojis].map(emoji => emoji.firstElementChild.getAttribute("alt"))
-        ];
-        break;
-    }
-  }
-
-  fs.writeFileSync("emoji-category.json", JSON.stringify(categories, null, 4));
-EOF
+node ./scripts/category.js
 rm emoji-category.html
+
+echo "+ Emoji dictionnary from unicode list"
+curl -k -s $UNICODE_EMOJI_LIST -o emoji-list.html
+node ./scripts/dictionnary.js
+rm emoji-list.html

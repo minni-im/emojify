@@ -5,11 +5,12 @@ const request = require("request");
 const rimraf = require("rimraf");
 const color = require("colors");
 
+const DRY_RUN = process.argv.includes("--dry-run");
+
 const { entries, createDir, async, emoji } = require("./utils");
 const PROVIDERS = require("./providers");
 const DICTIONNARY = require("../emoji-source.json");
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
-const ASSETS = [];
 
 function createProviderFolders(provider) {
     createDir(__dirname, "..", "assets", provider);
@@ -65,7 +66,7 @@ const fetchImage = function (name, variation) {
     return Promise.all(PROVIDERS.map(provider => fetchProviderImage(provider, name, variation)));
 };
 
-const fetchEmojiImage = async(function *(name, variation) {
+const fetchEmojiImage = async(function *(name, variation = false) {
     const images = yield fetchImage(name, variation);
     const results = {};
     images.forEach(([ providerName, name, buffer ]) => {
@@ -76,17 +77,26 @@ const fetchEmojiImage = async(function *(name, variation) {
 
 console.log("Preparing filesystem".bold);
 console.log("Cleaning folders...");
-rimraf.sync(ASSETS_DIR);
+!DRY_RUN && rimraf.sync(ASSETS_DIR);
 
 console.log("Creating default folders structure...");
-createDir(__dirname, "..", "assets");
-PROVIDERS.forEach(({ name }) => createProviderFolders(name));
+!DRY_RUN && createDir(__dirname, "..", "assets");
+!DRY_RUN && PROVIDERS.forEach(({ name }) => createProviderFolders(name));
 
 console.log("Processing assets computation".bold);
-
-for (const [name, emoji] of entries(DICTIONNARY)) {
-    ASSETS.push(fetchEmojiImage(emoji.unicode, emoji.unicode_alternates));
-}
+const ASSETS = DICTIONNARY.reduce((dict, emoji) => {
+    const { unified, variations } = emoji;
+    const name = unified.toLowerCase();
+    const variation = variations && variations.length && variations[0].toLowerCase();
+    dict.push(fetchEmojiImage(name, variation));
+    if (emoji.skin_variations) {
+        for(const [skinVariation, skinEmoji] of entries(emoji.skin_variations)) {
+            dict.push(fetchEmojiImage(skinEmoji.unified.toLowerCase()));
+        }
+    }
+    return dict;
+}, []);
+console.log(`+ ${ASSETS.length} emojis in total.`);
 
 console.log("Downloading assets".bold);
 

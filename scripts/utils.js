@@ -1,12 +1,13 @@
 "use strict";
 const fs = require("fs");
 const path = require("path");
+const request = require("request");
 
 module.exports = {
     createDir() {
         fs.mkdirSync(path.join.apply(null, arguments));
     },
-    
+
     fileExists(path) {
         try {
             fs.accessSync(path);
@@ -41,5 +42,14 @@ module.exports = {
             .split("-")
             .map(codepoint => parseInt(codepoint, 16))
         );
+    },
+    download(url, filePath) {
+        return new Promise((resolve, reject) => {
+            request(url).on("end", () => {
+                return resolve();
+            }).on("error", (error) => {
+                return reject(error);
+            }).pipe(fs.createWriteStream(filePath));
+        });
     }
 }
