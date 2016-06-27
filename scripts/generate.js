@@ -5,8 +5,8 @@ const color = require("colors");
 
 const { entries, fileExists } = require("./utils");
 
-const DICTIONNARY = require("../emoji-source.json");
-const PROVIDERS = require("./providers.js");
+const DICTIONNARY = require("../data/emoji-source.json");
+const PROVIDERS = require("../data/providers.js");
 
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
 const PROVIDERS_MASKS = {};

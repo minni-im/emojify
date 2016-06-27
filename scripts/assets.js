@@ -8,8 +8,8 @@ const color = require("colors");
 const DRY_RUN = process.argv.includes("--dry-run");
 
 const { entries, createDir, async, emoji } = require("./utils");
-const PROVIDERS = require("./providers");
-const DICTIONNARY = require("../emoji-source.json");
+const PROVIDERS = require("../data/providers");
+const DICTIONNARY = require("../data/emoji-source.json");
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
 
 function createProviderFolders(provider) {

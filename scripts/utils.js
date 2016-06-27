@@ -22,6 +22,7 @@ module.exports = {
             yield [key, obj[key]];
         }
     },
+
     async(makeGenerator) {
         return function(...args) {
             const generator = makeGenerator.apply(this, args);
@@ -37,12 +38,14 @@ module.exports = {
             return handle(generator.next());
         }
     },
+
     emoji(codepointsAsString) {
         return String.fromCodePoint(...codepointsAsString
             .split("-")
             .map(codepoint => parseInt(codepoint, 16))
         );
     },
+
     download(url, filePath) {
         return new Promise((resolve, reject) => {
             request(url).on("end", () => {

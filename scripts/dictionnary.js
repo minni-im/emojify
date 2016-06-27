@@ -2,7 +2,11 @@
 const fs = require("fs");
 const jsdom = require("jsdom").jsdom;
 
+const DRY_RUN = process.argv.includes("--dry-run");
+const GENERATE_NAME_LIST = process.argv.includes("--generate-names");
+
 const { emoji: unicodify } = require("./utils");
+const { BASIC: BASIC_REPLACEMENTS, CLOCK_MAPPING } = require("../data/replacement.json");
 
 const source = fs.readFileSync("./emoji-list.html");
 const document = jsdom(source);
@@ -90,14 +94,26 @@ for(const row of ROWS) {
         ];
     }
 
+    /* Clock */
+    if (name.includes("CLOCK FACE")) {
+        shortname = "clock" + CLOCK_MAPPING[alias.substr(2)];
+    }
+
+    // ===== IF we don't have yet a shortname, bunch of fallbacks
+
     /* Alias present in name ≊ */
     if (!shortname && alias && alias.includes("≊")) {
         shortname = alias.substr(2).replace(/ /g, "-");
     }
 
-    /* Fallback, shortname based on name */
+    /* Shortname based on name */
     if (!shortname && name.includes(" ")) {
         shortname = name.replace(/ /g, "-").toLowerCase();
+    }
+
+    /* Special use case: dark-sunglasses. */
+    if (alias && alias.substr(2) === "sunglasses" && name === "DARK SUNGLASSES") {
+        shortname = "dark-sunglasses";
     }
 
     // ===== We are done, moving on to next emoji
@@ -111,29 +127,15 @@ for(const row of ROWS) {
 
 
 // Second pass to filter things out a bit more precisely
-const REPLACEMENTS = {
-    "-button$": "",
-    "-with-face$": "",
-    "-face$": "",
-    "^face-with-": "",
-    "^smiling-face-with-": "",
-    "^squared-": "",
-    "^globe-showing": "earth",
-    "^open-mouth$": "smiley",
-    "^open-mouth-and-smiling-eyes$": "smile",
-    "beer-mug": "beer",
-    "clinking-beer-mugs": "beers"
-};
-
 LIST.forEach(emoji => {
     const { shortname } = emoji;
     let newShortname = shortname;
 
     /* Replacements */
-    Object.keys(REPLACEMENTS).forEach(pattern => {
+    Object.keys(BASIC_REPLACEMENTS).forEach(pattern => {
         const re = new RegExp(pattern.replace(/\-/g, "\\-"), "");
         if (re.test(newShortname)) {
-            newShortname = newShortname.replace(re, REPLACEMENTS[pattern]);
+            newShortname = newShortname.replace(re, BASIC_REPLACEMENTS[pattern]);
         }
     });
 
@@ -142,17 +144,9 @@ LIST.forEach(emoji => {
     }
 });
 
-fs.writeFileSync("emoji-list.json", JSON.stringify(LIST, null, 4));
-
-fs.writeFileSync("emoji-name.json", JSON.stringify(LIST.map(e => {}), null, 4));
-
-LIST.forEach(emoji => {
-    console.log(
-        unicodify(emoji.unified),
-        "\t\t",
-        emoji.shortname || "",
-        emoji.skin_variations ? "(skin)" : "",
-        "\t\t",
-        !emoji.shortname ? emoji.name : ""
-    );
-});
+if (!DRY_RUN) {
+    fs.writeFileSync("./data/emoji-list.json", JSON.stringify(LIST, null, 4));
+    if (GENERATE_NAME_LIST) {
+        fs.writeFileSync("./data/emoji-name.txt", `${(LIST.map(e => `${unicodify(e.unified)};${e.unified};${e.shortname}`).join("\n"))}`);
+    }
+}

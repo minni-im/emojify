@@ -19,7 +19,7 @@
             "grin",
             "smile"
         ],
-        "shortname": "grinning-face-with-smiling-eyes"
+        "shortname": "grinning-smiling-eyes"
     },
     {
         "index": 3,
@@ -31,7 +31,7 @@
             "laugh",
             "tear"
         ],
-        "shortname": "tears-of-joy"
+        "shortname": "joy"
     },
     {
         "index": 4,
@@ -57,7 +57,7 @@
             "open",
             "smile"
         ],
-        "shortname": "smiley"
+        "shortname": "open-mouth"
     },
     {
         "index": 6,
@@ -83,7 +83,7 @@
             "smile",
             "sweat"
         ],
-        "shortname": "open-mouth-and-cold-sweat"
+        "shortname": "sweat-smile"
     },
     {
         "index": 8,
@@ -97,7 +97,7 @@
             "satisfied",
             "smile"
         ],
-        "shortname": "open-mouth-and-tightly-closed-eyes"
+        "shortname": "laughing"
     },
     {
         "index": 9,
@@ -133,7 +133,7 @@
             "um",
             "yum"
         ],
-        "shortname": "face-savouring-delicious-food"
+        "shortname": "yum"
     },
     {
         "index": 12,
@@ -151,7 +151,7 @@
             "sunglasses",
             "weather"
         ],
-        "shortname": "smiling-face-with-sunglasses"
+        "shortname": "sunglasses"
     },
     {
         "index": 13,
@@ -164,7 +164,7 @@
             "love",
             "smile"
         ],
-        "shortname": "heart-shaped-eyes"
+        "shortname": "heart-eyes"
     },
     {
         "index": 14,
@@ -175,7 +175,7 @@
             "heart",
             "kiss"
         ],
-        "shortname": "face-throwing-a-kiss"
+        "shortname": "kissing-heart"
     },
     {
         "index": 15,
@@ -197,7 +197,7 @@
             "kiss",
             "smile"
         ],
-        "shortname": "kissing-face-with-smiling-eyes"
+        "shortname": "kissing-smiling-eyes"
     },
     {
         "index": 17,
@@ -209,7 +209,7 @@
             "face",
             "kiss"
         ],
-        "shortname": "kissing-face-with-closed-eyes"
+        "shortname": "kissing-closed-eyes"
     },
     {
         "index": 18,
@@ -287,7 +287,7 @@
             "quiet",
             "silent"
         ],
-        "shortname": "face-without-mouth"
+        "shortname": "no-mouth"
     },
     {
         "index": 25,
@@ -342,7 +342,7 @@
             "open",
             "sympathy"
         ],
-        "shortname": "smiley"
+        "shortname": "open-mouth"
     },
     {
         "index": 30,
@@ -440,7 +440,7 @@
             "tongue",
             "wink"
         ],
-        "shortname": "stuck-out-tongue-and-winking-eye"
+        "shortname": "stuck-out-tongue-winking-eye"
     },
     {
         "index": 39,
@@ -453,7 +453,7 @@
             "taste",
             "tongue"
         ],
-        "shortname": "stuck-out-tongue-and-tightly-closed-eyes"
+        "shortname": "stuck-out-tongue-closed-eye"
     },
     {
         "index": 40,
@@ -485,7 +485,7 @@
             "face",
             "sweat"
         ],
-        "shortname": "cold-sweat"
+        "shortname": "sweat"
     },
     {
         "index": 43,
@@ -637,7 +637,7 @@
             "mouth",
             "open"
         ],
-        "shortname": "frowning-face-with-open-mouth"
+        "shortname": "frowning-open-mouth"
     },
     {
         "index": 57,
@@ -695,7 +695,7 @@
             "rushed",
             "sweat"
         ],
-        "shortname": "open-mouth-and-cold-sweat"
+        "shortname": "sweat-smile"
     },
     {
         "index": 62,
@@ -709,7 +709,7 @@
             "scared",
             "scream"
         ],
-        "shortname": "face-screaming-in-fear"
+        "shortname": "fear"
     },
     {
         "index": 63,
@@ -1034,7 +1034,7 @@
             "open",
             "smile"
         ],
-        "shortname": "smiling-cat-face-with-open-mouth"
+        "shortname": "smiling-cat-open-mouth"
     },
     {
         "index": 88,
@@ -1047,7 +1047,7 @@
             "grin",
             "smile"
         ],
-        "shortname": "grinning-cat-face-with-smiling-eyes"
+        "shortname": "grinning-cat-smiling-eyes"
     },
     {
         "index": 89,
@@ -1059,7 +1059,7 @@
             "joy",
             "tear"
         ],
-        "shortname": "cat-face-with-tears-of-joy"
+        "shortname": "cat-joy"
     },
     {
         "index": 90,
@@ -1073,7 +1073,7 @@
             "love",
             "smile"
         ],
-        "shortname": "smiling-cat-face-with-heart-shaped-eyes"
+        "shortname": "smiling-cat-heart-eyes"
     },
     {
         "index": 91,
@@ -1086,7 +1086,7 @@
             "smile",
             "wry"
         ],
-        "shortname": "cat-face-with-wry-smile"
+        "shortname": "cat-wry-smile"
     },
     {
         "index": 92,
@@ -1098,7 +1098,7 @@
             "face",
             "kiss"
         ],
-        "shortname": "kissing-cat-face-with-closed-eyes"
+        "shortname": "kissing-cat-closed-eyes"
     },
     {
         "index": 93,
@@ -3082,7 +3082,7 @@
         "keywords": [
             "heart"
         ],
-        "shortname": "red-heart"
+        "shortname": "heart"
     },
     {
         "index": 565,
@@ -3404,7 +3404,7 @@
             "glasses",
             "sunglasses"
         ],
-        "shortname": "sunglasses"
+        "shortname": "dark-sunglasses"
     },
     {
         "index": 594,
@@ -7419,7 +7419,7 @@
             "o’clock",
             "twelve"
         ],
-        "shortname": "twelve-o’clock"
+        "shortname": "clock12"
     },
     {
         "index": 967,
@@ -7433,7 +7433,7 @@
             "thirty",
             "twelve"
         ],
-        "shortname": "twelve-thirty"
+        "shortname": "clock1230"
     },
     {
         "index": 968,
@@ -7447,7 +7447,7 @@
             "o’clock",
             "one"
         ],
-        "shortname": "one-o’clock"
+        "shortname": "clock1"
     },
     {
         "index": 969,
@@ -7461,7 +7461,7 @@
             "one",
             "thirty"
         ],
-        "shortname": "one-thirty"
+        "shortname": "clock130"
     },
     {
         "index": 970,
@@ -7475,7 +7475,7 @@
             "o’clock",
             "two"
         ],
-        "shortname": "two-o’clock"
+        "shortname": "clock2"
     },
     {
         "index": 971,
@@ -7489,7 +7489,7 @@
             "thirty",
             "two"
         ],
-        "shortname": "two-thirty"
+        "shortname": "clock230"
     },
     {
         "index": 972,
@@ -7503,7 +7503,7 @@
             "o’clock",
             "three"
         ],
-        "shortname": "three-o’clock"
+        "shortname": "clock3"
     },
     {
         "index": 973,
@@ -7517,7 +7517,7 @@
             "thirty",
             "three"
         ],
-        "shortname": "three-thirty"
+        "shortname": "clock330"
     },
     {
         "index": 974,
@@ -7531,7 +7531,7 @@
             "four",
             "o’clock"
         ],
-        "shortname": "four-o’clock"
+        "shortname": "clock4"
     },
     {
         "index": 975,
@@ -7545,7 +7545,7 @@
             "four",
             "thirty"
         ],
-        "shortname": "four-thirty"
+        "shortname": "clock430"
     },
     {
         "index": 976,
@@ -7559,7 +7559,7 @@
             "five",
             "o’clock"
         ],
-        "shortname": "five-o’clock"
+        "shortname": "clock5"
     },
     {
         "index": 977,
@@ -7573,7 +7573,7 @@
             "five",
             "thirty"
         ],
-        "shortname": "five-thirty"
+        "shortname": "clock530"
     },
     {
         "index": 978,
@@ -7587,7 +7587,7 @@
             "o’clock",
             "six"
         ],
-        "shortname": "six-o’clock"
+        "shortname": "clock6"
     },
     {
         "index": 979,
@@ -7601,7 +7601,7 @@
             "six",
             "thirty"
         ],
-        "shortname": "six-thirty"
+        "shortname": "clock630"
     },
     {
         "index": 980,
@@ -7615,7 +7615,7 @@
             "o’clock",
             "seven"
         ],
-        "shortname": "seven-o’clock"
+        "shortname": "clock7"
     },
     {
         "index": 981,
@@ -7629,7 +7629,7 @@
             "seven",
             "thirty"
         ],
-        "shortname": "seven-thirty"
+        "shortname": "clock730"
     },
     {
         "index": 982,
@@ -7643,7 +7643,7 @@
             "eight",
             "o’clock"
         ],
-        "shortname": "eight-o’clock"
+        "shortname": "clock8"
     },
     {
         "index": 983,
@@ -7657,7 +7657,7 @@
             "eight",
             "thirty"
         ],
-        "shortname": "eight-thirty"
+        "shortname": "clock830"
     },
     {
         "index": 984,
@@ -7671,7 +7671,7 @@
             "nine",
             "o’clock"
         ],
-        "shortname": "nine-o’clock"
+        "shortname": "clock9"
     },
     {
         "index": 985,
@@ -7685,7 +7685,7 @@
             "nine",
             "thirty"
         ],
-        "shortname": "nine-thirty"
+        "shortname": "clock930"
     },
     {
         "index": 986,
@@ -7699,7 +7699,7 @@
             "o’clock",
             "ten"
         ],
-        "shortname": "ten-o’clock"
+        "shortname": "clock10"
     },
     {
         "index": 987,
@@ -7713,7 +7713,7 @@
             "ten",
             "thirty"
         ],
-        "shortname": "ten-thirty"
+        "shortname": "clock1030"
     },
     {
         "index": 988,
@@ -7727,7 +7727,7 @@
             "eleven",
             "o’clock"
         ],
-        "shortname": "eleven-o’clock"
+        "shortname": "clock11"
     },
     {
         "index": 989,
@@ -7741,7 +7741,7 @@
             "eleven",
             "thirty"
         ],
-        "shortname": "eleven-thirty"
+        "shortname": "clock1130"
     },
     {
         "index": 990,
@@ -9234,7 +9234,7 @@
             "mahjong",
             "red"
         ],
-        "shortname": "mahjong-red-dragon"
+        "shortname": "mahjong"
     },
     {
         "index": 1165,
@@ -12933,7 +12933,7 @@
         "keywords": [
             "parking"
         ],
-        "shortname": "p"
+        "shortname": "parking"
     },
     {
         "index": 1488,

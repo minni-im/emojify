@@ -5,6 +5,8 @@ const source = fs.readFileSync("./emoji-category.html");
 const categories = [];
 const document = jsdom(source);
 
+const DRY_RUN = process.argv.includes("--dry-run");
+
 const rows = document.querySelectorAll("tr");
 let current;
 for (const row of rows) {
@@ -26,4 +28,6 @@ for (const row of rows) {
       }
 }
 
-fs.writeFileSync("emoji-category.json", JSON.stringify(categories, null, 4));
+if (!DRY_RUN) {
+    fs.writeFileSync("./data/emoji-category.json", JSON.stringify(categories, null, 4));
+}
