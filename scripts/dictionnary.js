@@ -7,6 +7,7 @@ const GENERATE_NAME_LIST = process.argv.includes("--generate-names");
 
 const { emoji: unicodify } = require("./utils");
 const { BASIC: BASIC_REPLACEMENTS, CLOCK_MAPPING } = require("../data/replacement.json");
+const EMOJI_TEXT = require("../data/emoji-text.json");
 
 const source = fs.readFileSync("./emoji-list.html");
 const document = jsdom(source);
@@ -48,6 +49,11 @@ for(const row of ROWS) {
         const parentEmoji = BY_UNIFIED[unified.split("-")[0]];
         parentEmoji.skin_variations = (parentEmoji.skin_variations || []).concat([unified])
         continue;
+    }
+
+    // ===== Text aliases
+    if (EMOJI_TEXT[emoji.unified]) {
+        emoji.text = [].concat(EMOJI_TEXT[emoji.unified]);
     }
 
     // ===== Guessing shortnames

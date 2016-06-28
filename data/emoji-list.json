@@ -57,6 +57,10 @@
             "open",
             "smile"
         ],
+        "text": [
+            "=)",
+            "=-)"
+        ],
         "shortname": "open-mouth"
     },
     {
@@ -69,6 +73,11 @@
             "mouth",
             "open",
             "smile"
+        ],
+        "text": [
+            "C:",
+            "c:",
+            ":-D"
         ],
         "shortname": "smile"
     },
@@ -97,6 +106,10 @@
             "satisfied",
             "smile"
         ],
+        "text": [
+            ":>",
+            ":->"
+        ],
         "shortname": "laughing"
     },
     {
@@ -106,6 +119,10 @@
         "keywords": [
             "face",
             "wink"
+        ],
+        "text": [
+            ";)",
+            ";-)"
         ],
         "shortname": "winking"
     },
@@ -150,6 +167,9 @@
             "sun",
             "sunglasses",
             "weather"
+        ],
+        "text": [
+            "8)"
         ],
         "shortname": "sunglasses"
     },
@@ -231,6 +251,11 @@
             "face",
             "smile"
         ],
+        "text": [
+            ":)",
+            "(:",
+            ":-)"
+        ],
         "shortname": "slightly-smiling"
     },
     {
@@ -262,6 +287,10 @@
             "deadpan",
             "face",
             "neutral"
+        ],
+        "text": [
+            ":|",
+            ":-|"
         ],
         "shortname": "neutral"
     },
@@ -341,6 +370,12 @@
             "mouth",
             "open",
             "sympathy"
+        ],
+        "text": [
+            ":o",
+            ":-o",
+            ":O",
+            ":-O"
         ],
         "shortname": "open-mouth"
     },
@@ -427,6 +462,14 @@
             "face",
             "tongue"
         ],
+        "text": [
+            ":p",
+            ":-p",
+            ":P",
+            ":-P",
+            ":b",
+            ":-b"
+        ],
         "shortname": "stuck-out-tongue"
     },
     {
@@ -439,6 +482,14 @@
             "joke",
             "tongue",
             "wink"
+        ],
+        "text": [
+            ";p",
+            ";-p",
+            ";b",
+            ";-b",
+            ";P",
+            ";-P"
         ],
         "shortname": "stuck-out-tongue-winking-eye"
     },
@@ -505,6 +556,12 @@
         "keywords": [
             "confused",
             "face"
+        ],
+        "text": [
+            ":\\",
+            ":-\\",
+            ":/",
+            ":-/"
         ],
         "shortname": "confused"
     },
@@ -579,6 +636,10 @@
             "disappointed",
             "face"
         ],
+        "text": [
+            "):",
+            ":-("
+        ],
         "shortname": "disappointed"
     },
     {
@@ -625,6 +686,9 @@
             "sob",
             "tear"
         ],
+        "text": [
+            ":'("
+        ],
         "shortname": "loudly-crying"
     },
     {
@@ -646,6 +710,9 @@
         "keywords": [
             "anguished",
             "face"
+        ],
+        "text": [
+            "D:"
         ],
         "shortname": "anguished"
     },
@@ -754,6 +821,10 @@
             "angry",
             "face",
             "mad"
+        ],
+        "text": [
+            ">:(",
+            ">:-("
         ],
         "shortname": "angry"
     },
@@ -2295,7 +2366,7 @@
             "skin",
             "tone"
         ],
-        "shortname": "skin-type-1-2"
+        "shortname": "skin-tone-1-2"
     },
     {
         "index": 354,
@@ -2307,7 +2378,7 @@
             "skin",
             "tone"
         ],
-        "shortname": "skin-type-3"
+        "shortname": "skin-tone-3"
     },
     {
         "index": 355,
@@ -2319,7 +2390,7 @@
             "skin",
             "tone"
         ],
-        "shortname": "skin-type-4"
+        "shortname": "skin-tone-4"
     },
     {
         "index": 356,
@@ -2331,7 +2402,7 @@
             "skin",
             "tone"
         ],
-        "shortname": "skin-type-5"
+        "shortname": "skin-tone-5"
     },
     {
         "index": 357,
@@ -2343,7 +2414,7 @@
             "skin",
             "tone"
         ],
-        "shortname": "skin-type-6"
+        "shortname": "skin-tone-6"
     },
     {
         "index": 358,
@@ -3061,6 +3132,10 @@
             "mark",
             "romance"
         ],
+        "text": [
+            ":*",
+            ":-*"
+        ],
         "shortname": "kiss-mark"
     },
     {
@@ -3081,6 +3156,9 @@
         "name": "HEAVY BLACK HEART",
         "keywords": [
             "heart"
+        ],
+        "text": [
+            "<3"
         ],
         "shortname": "heart"
     },
@@ -3104,6 +3182,9 @@
             "break",
             "broken",
             "heart"
+        ],
+        "text": [
+            "</3"
         ],
         "shortname": "broken-heart"
     },
@@ -3713,6 +3794,9 @@
         "keywords": [
             "face",
             "monkey"
+        ],
+        "text": [
+            ":o)"
         ],
         "shortname": "monkey-face"
     },

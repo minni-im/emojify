@@ -6,7 +6,7 @@ const unicodeToUnified = unicode =>
 
 const unifiedToUnicode = unified => {
     const codepoints = [];
-    for(let char of unified) {
+    for(const char of unified) {
         codepoints.push(char.codePointAt(0).toString(16))
     }
     return codepoints.join("-");
@@ -50,8 +50,10 @@ const reverseMap = (map, mapValue = v => v, mapKey = k => k) =>
         }, {});
 const SHORT_TO_ASCII = reverseMap(ASCII_LIST);
 
-/* Public API */
+/* Managing shortnames alias */
 
+
+/* Public API */
 export const ALL = BY_NAMES;
 
 /**
@@ -75,7 +77,10 @@ export function unifyUnicode(text) {
  */
 export function shortNameToAscii(text) {
     return text.replace(REGEXP_COLONS,
-        (match, name, skinTone, toneLevel) => SHORT_TO_ASCII[name][0] || match);
+        (match, name, skinTone, toneLevel) => (
+            (SHORT_TO_ASCII[name] && SHORT_TO_ASCII[name][0])
+            || `:${name}:`
+        ));
 }
 
 /**

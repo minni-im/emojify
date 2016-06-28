@@ -13,6 +13,7 @@
         "mahjong-red-dragon": "mahjong",
         "^p$": "parking",
         "-face-with-": "-",
+        "^skin-type": "skin-tone",
         "grinning-face-with-smiling-eyes": "grin",
         "tears-of-joy": "joy",
         "^cold-sweat$": "sweat",

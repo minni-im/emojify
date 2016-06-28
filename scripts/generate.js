@@ -3,13 +3,15 @@ const fs = require("fs");
 const path = require("path");
 const color = require("colors");
 
-const { entries, fileExists } = require("./utils");
+const { entries, fileExists, emoji: nativeEmoji } = require("./utils");
 
-const DICTIONNARY = require("../data/emoji-source.json");
+// const DICTIONNARY = require("../data/emoji-source.json");
+const DICTIONNARY = require("../data/emoji-list.json");
 const PROVIDERS = require("../data/providers.js");
 
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
 const PROVIDERS_MASKS = {};
+const SKIN_TONE_MODIFIER = ["skin-tone-1-2", "skin-tone-3", "skin-tone-4", "skin-tone-5", "skin-tone-6"];
 
 console.log("Building emojis info based on emoji-data dictionnary".bold);
 
@@ -17,22 +19,17 @@ const E_BY_UNIFIED = {};
 const E_BY_SURROGATES = {};
 const E_BY_ASCII = {};
 const E_BY_NAMES = DICTIONNARY.reduce((dict, emoji) => {
-    const name = emoji.short_name;
+    const name = emoji.shortname;
     const item = dict[name] = {
-        unicode: [emoji.unified].concat(emoji.variations).map(u => u.toLowerCase())
+        unicode: [emoji.unified].concat(emoji.variation || [])
     }
-    if (emoji.short_names.length > 1) {
-        item.alias = emoji.short_names.slice(1);
+    if (emoji.shortnames && emoji.shortnames.length > 1) {
+        item.alias = emoji.shortnames;
     }
     if (emoji.skin_variations) {
         // TODO: Could be optimized here with just a single boolean
-        item.skin_variations = [];
-        for(const [variation_name, variation] of entries(emoji.skin_variations)) {
-            item.skin_variations.push(variation.unified.toLowerCase());
-        }
+        item.skin_variations = emoji.skin_variations;
     }
-
-    item.category = emoji.category;
 
     // Checking provider image existance
     item.mask = PROVIDERS.reduce((mask, {name: providerName, type}, index) => {
@@ -45,20 +42,17 @@ const E_BY_NAMES = DICTIONNARY.reduce((dict, emoji) => {
 
     // Building ASCII based version of the emoji
     if (emoji.text) {
-        E_BY_ASCII[emoji.text] = name
-    }
-    if (emoji.texts) {
-        emoji.texts.forEach(text => E_BY_ASCII[text] = name);
+        emoji.text.forEach(text => E_BY_ASCII[text] = name);
     }
 
     // Building secondary dictionnary, based on unified unicode, and native unified char
     item.unicode.forEach(unicode => {
         E_BY_UNIFIED[unicode] = name;
-        E_BY_SURROGATES[String.fromCodePoint(...unicode.split("-").map(hex => `0x${hex}`))] = unicode;
+        E_BY_SURROGATES[nativeEmoji(unicode)] = unicode;
     });
     (item.skin_variations || []).forEach((unicode, index) => {
-        E_BY_UNIFIED[unicode] = `${name}::skin-tone-${index+2}`;
-        E_BY_SURROGATES[String.fromCodePoint(...unicode.split("-").map(hex => `0x${hex}`))] = unicode;
+        E_BY_UNIFIED[unicode] = `${name}::${SKIN_TONE_MODIFIER[index]}`;
+        E_BY_SURROGATES[nativeEmoji(unicode)] = unicode;
     });
     return dict;
 }, {});
