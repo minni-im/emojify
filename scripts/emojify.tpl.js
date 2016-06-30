@@ -17,17 +17,16 @@ const BY_NAMES = EMOJI_BY_NAMES;
 const BY_UNICODE = EMOJI_BY_UNICODE;
 const ASCII_LIST = EMOJI_ASCII;
 const MASK_BY_PROVIDER = PROVIDERS_MASKS;
-const SKIN_TONE_MODIFIERS = [0, 0, "1f3fb", "1f3fc", "1f3fd", "1f3fe", "1f3ff"];
+const SKIN_TONE_MODIFIERS = { "1-2": "1f3fb", "3": "1f3fc", "4": "1f3fd", "5": "1f3fe" , "6": "1f3ff"};
 
-const REGEXP_COLONS = new RegExp("\:([a-zA-Z0-9-_+]+)\:(\:skin-tone-([2-6])\:)?", "g");
+const REGEXP_COLONS = new RegExp("\:([a-zA-Z0-9-_+]+)\:(\:skin-tone-((?:1\-2|[3-6]))\:)?", "g");
 
-let variations = [];
 const SURROGATES = Object.keys(BY_UNICODE)
     .map(unicode => unicodeToUnified(unicode))
     .map(unified => unified.replace('*', '\\*'))
     .sort((a, b) => b.length - a.length);
 
-const REGEXP_SURROGATES = new RegExp(`(${SURROGATES.join("|")})`, "ug");
+const REGEXP_SURROGATES = new RegExp(`(?:${SURROGATES.join("|")})`, "g");
 
 const ASCII_LIST_ESCAPED = {};
 const ASCII = Object.keys(ASCII_LIST)
@@ -50,11 +49,11 @@ const reverseMap = (map, mapValue = v => v, mapKey = k => k) =>
         }, {});
 const SHORT_TO_ASCII = reverseMap(ASCII_LIST);
 
-/* Managing shortnames alias */
-
 
 /* Public API */
 export const ALL = BY_NAMES;
+export const UNICODE = BY_UNICODE;
+export const ASCII = ASCII_LIST;
 
 /**
  * Standardiztion of all unicode emojis.
@@ -170,7 +169,7 @@ export function shortNameToUnicode(text) {
  * @return Boolean
  */
 export function containsEmoji(text) {
-    return extractEmoji(text) !== null;
+    return REGEXP_COLONS.test(text) || REGEXP_SURROGATES.test(text);
 }
 
 /**
@@ -183,5 +182,54 @@ export function containsEmoji(text) {
  * @return Object structural information regarding detected emojis
  */
 export function extractEmoji(text) {
-    return null;
+    let emojis = {};
+
+    // Shortnames
+    text.replace(REGEXP_COLONS, (match, name, skinTone, toneLevel, index) => {
+        const emoji = BY_NAMES[name];
+        if (emoji) {
+            emojis[name] = {
+                unicode: emoji.unicode[0],
+                indices: [ index, index + match.length ]
+            }
+            if (skinTone) {
+                emojis[name].skin_variation = {
+                    shortname: skinTone.replace(/:/g, ""),
+                    unicode: [emoji.unicode[0], SKIN_TONE_MODIFIERS[toneLevel]].join("-")
+                }
+            }
+        }
+    });
+
+    // Unified unicode char
+    text.replace(REGEXP_SURROGATES, (match, index) => {
+        let shortName = BY_UNICODE[unifiedToUnicode(match)];
+        let skinVariation = false;
+        shortName = `:${shortName}:`.replace(REGEXP_COLONS, (match, name, skinTone, toneLevel) => {
+            if (skinTone) {
+                skinVariation = {
+                    shortname: skinTone.replace(/:/g, ""),
+                    unicode: SKIN_TONE_MODIFIERS[toneLevel]
+                };
+            }
+            return name;
+        })
+
+        const emoji = BY_NAMES[shortName];
+        if (emoji) {
+            emojis[shortName] = {
+                unicode:  emoji.unicode[0],
+                indices: [index, index + match.length]
+            }
+
+            if (skinVariation) {
+                emojis[shortName].skin_variation = {
+                    shortname: skinVariation.shortname,
+                    unicode: [emoji.unicode[0], skinVariation.unicode].join("-")
+                };
+            }
+        }
+    });
+
+    return Object.keys(emojis).length > 0 ? emojis : null;
 }
