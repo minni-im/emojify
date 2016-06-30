@@ -9,7 +9,7 @@ const DRY_RUN = process.argv.includes("--dry-run");
 
 const { entries, createDir, async, emoji } = require("./utils");
 const PROVIDERS = require("../data/providers");
-const DICTIONNARY = require("../data/emoji-source.json");
+const DICTIONNARY = require("../data/emoji-list.json");
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
 
 function createProviderFolders(provider) {
@@ -85,15 +85,10 @@ console.log("Creating default folders structure...");
 
 console.log("Processing assets computation".bold);
 const ASSETS = DICTIONNARY.reduce((dict, emoji) => {
-    const { unified, variations } = emoji;
-    const name = unified.toLowerCase();
-    const variation = variations && variations.length && variations[0].toLowerCase();
+    const { unified, variation } = emoji;
+    const name = unified
     dict.push(fetchEmojiImage(name, variation));
-    if (emoji.skin_variations) {
-        for(const [skinVariation, skinEmoji] of entries(emoji.skin_variations)) {
-            dict.push(fetchEmojiImage(skinEmoji.unified.toLowerCase()));
-        }
-    }
+    (emoji.skin_variations || []).forEach(unified => dict.push(fetchEmojiImage(unified)));
     return dict;
 }, []);
 console.log(`+ ${ASSETS.length} emojis in total.`);
@@ -124,7 +119,7 @@ Promise
                     if (!counters[provider]) {
                         counters[provider] = 0;
                     }
-                    writeToDisk(name, provider, buffer);
+                    !DRY_RUN && writeToDisk(name, provider, buffer);
                     counters[provider]++;
                 }
             }
