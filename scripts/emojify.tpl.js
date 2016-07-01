@@ -29,7 +29,7 @@ const SURROGATES = Object.keys(BY_UNICODE)
 const REGEXP_SURROGATES = new RegExp(`(?:${SURROGATES.join("|")})`, "g");
 
 const ASCII_LIST_ESCAPED = {};
-const ASCII = Object.keys(ASCII_LIST)
+const SMILEYS = Object.keys(ASCII_LIST)
     .map(emoticon => {
         const escaped = emoticon.replace(/\&/g, '&amp;').replace(/\</g, '&lt;').replace(/\>/g, '&gt;');
         if (!ASCII_LIST_ESCAPED[escaped]) {
@@ -38,7 +38,7 @@ const ASCII = Object.keys(ASCII_LIST)
         return escaped;
     })
     .map(emoticon => escapeRegexp(emoticon));
-const REGEXP_ASCII = new RegExp(`(^|\\s)(${ASCII.join("|")})(?=$|[\\s|\\?\\.,!])`, "g");
+const REGEXP_ASCII = new RegExp(`(^|\\s)(${SMILEYS.join("|")})(?=$|[\\s|\\?\\.,!])`, "g");
 
 const reverseMap = (map, mapValue = v => v, mapKey = k => k) =>
     Object.keys(map)
