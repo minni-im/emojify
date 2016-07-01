@@ -7,51 +7,37 @@ const color = require("colors");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
-const { entries, createDir, async, emoji } = require("./utils");
+const { entries, createDir, async, emoji, download, guard } = require("./utils");
 const PROVIDERS = require("../data/providers");
 const DICTIONNARY = require("../data/emoji-list.json");
 const ASSETS_DIR = path.join(__dirname, "..", "assets");
+const MAX_PARRALEL_DOWNLOAD = 10;
+const guardedDownload = guard(MAX_PARRALEL_DOWNLOAD, download);
 
-function createProviderFolders(provider) {
-    createDir(__dirname, "..", "assets", provider);
-}
-
-function getImage(url) {
-    return new Promise((resolve, reject) => {
-        request({
-            url,
-            encoding: null
-        }, (error, response, body) => {
-            if (!error && response.statusCode === 200) {
-                return resolve(body);
-            }
-            return reject(
-                (response && response.statusCode === 404 && new Error(`Error 404 '${url}'`)) ||
-                error
-            );
-        })
-    })
+function createProviderFolders({ type, name }) {
+    createDir(__dirname, "..", "assets", name);
+    createDir(__dirname, "..", "assets", name, type);
 }
 
 const fetchProviderImage = async(function* (provider, name, varation) {
     const { type, name: providerName, url, preProcessName } = provider;
-    let rawImage;
+    let downloadOk = false;
     let imageName = preProcessName ? preProcessName(name) : name;
+    const filepath = path.join(__dirname, "..", "assets", providerName, type, `${name}.${type}`)
 
     const warn = (exception) => {
         console.warn("Warning".yellow.bold, providerName.grey, `${emoji(name)}  `, name.cyan, exception.message);
     }
 
     try {
-        rawImage = yield getImage(url(imageName));
+        downloadOk = yield guardedDownload(url(imageName), filepath, DRY_RUN);
     } catch (exception) {
         // We consider we don't have an image for that one
-        rawImage = false;
         // But maybe the image only exist with the varation. Let's try.
         if (varation) {
             imageName = preProcessName ? preProcessName(varation) : varation;
             try {
-                rawImage = yield getImage(url(imageName));
+                downloadOk = yield guardedDownload(url(imageName), filepath, DRY_RUN);
             } catch (ex) {
                 warn(ex);
             }
@@ -59,7 +45,7 @@ const fetchProviderImage = async(function* (provider, name, varation) {
             warn(exception);
         }
     }
-    return [providerName, `${name}.${type}`, rawImage];
+    return [providerName, name, downloadOk];
 });
 
 const fetchImage = function (name, variation) {
@@ -69,11 +55,11 @@ const fetchImage = function (name, variation) {
 const fetchEmojiImage = async(function *(name, variation = false) {
     const images = yield fetchImage(name, variation);
     const results = {};
-    images.forEach(([ providerName, name, buffer ]) => {
-        results[providerName] = [name, buffer];
+    images.forEach(([providerName, name, ok]) => {
+        results[providerName] = [name, ok];
     })
     return results;
-})
+});
 
 console.log("Preparing filesystem".bold);
 console.log("Cleaning folders...");
@@ -81,7 +67,7 @@ console.log("Cleaning folders...");
 
 console.log("Creating default folders structure...");
 !DRY_RUN && createDir(__dirname, "..", "assets");
-!DRY_RUN && PROVIDERS.forEach(({ name }) => createProviderFolders(name));
+!DRY_RUN && PROVIDERS.forEach(provider => createProviderFolders(provider));
 
 console.log("Processing assets computation".bold);
 const ASSETS = DICTIONNARY.reduce((dict, emoji) => {
@@ -95,42 +81,24 @@ console.log(`+ ${ASSETS.length} emojis in total.`);
 
 console.log("Downloading assets".bold);
 
-function writeToDisk(name, provider, buffer) {
-    const fileType = name.endsWith(".svg") ? "svg" : "png";
-    const folderPath = path.join(".", "assets", provider, fileType);
-    try {
-        fs.accessSync(folderPath);
-    } catch(ex) {
-        createDir(".", "assets", provider, fileType);
-    }
-    fs.writeFileSync(
-        path.join(".", "assets", provider, fileType, name),
-        buffer
-    );
-}
-
 Promise
     .all(ASSETS)
     .then(emojis => {
         const counters = {};
         emojis.forEach(providers => {
-            for (const [provider, [name, buffer]] of entries(providers)) {
-                if (buffer) {
+            for (const [provider, [name, ok]] of entries(providers)) {
+                if (ok) {
                     if (!counters[provider]) {
                         counters[provider] = 0;
                     }
-                    !DRY_RUN && writeToDisk(name, provider, buffer);
                     counters[provider]++;
                 }
             }
         });
-
         console.log(`Assets download complete.`);
-
         for(const [provider, counter] of entries(counters)) {
             console.log(`${provider}:`, `${counter}`.grey);
         }
-
     })
     .catch(error => {
         console.error("Error".red.bold, error);

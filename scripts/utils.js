@@ -46,13 +46,51 @@ module.exports = {
         );
     },
 
-    download(url, filePath) {
+    download(url, filePath, dryRun = false) {
         return new Promise((resolve, reject) => {
-            request(url).on("end", () => {
-                return resolve();
-            }).on("error", (error) => {
-                return reject(error);
-            }).pipe(fs.createWriteStream(filePath));
+            request.get({ url, encoding: null })
+                .on("response", response => {
+                    if (response.statusCode === 404) {
+                        return reject(new Error(`Error 404: ${url}`));
+                    }
+                    resolve(true);
+                    if (!dryRun) {
+                        response.pipe(
+                            fs.createWriteStream(filePath)
+                        ).on("error", error => console.error(error));
+                    }
+                })
+                .on("error", error => reject(error));
         });
+    },
+
+    guard(size, fn) {
+        const queue = [];
+        const run = (fn, args) => {
+            if (size) {
+                size--;
+                const result = new Promise((resolve, reject) => {
+                    resolve(fn(...args))
+                });
+                result.then(release, release);
+                return result;
+            } else {
+                return new Promise(resolve => {
+                    queue.push({ resolve, fn, args });
+                })
+            }
+        }
+
+        const release = () => {
+            size++;
+            if (queue.length) {
+                const { resolve, fn, args } = queue.shift();
+                resolve(run(fn, args));
+            }
+        }
+
+        return function(...args) {
+            return run(fn, args);
+        }
     }
 }
