@@ -27,7 +27,9 @@
         "stuck-out-tongue-and-winking-eye": "stuck-out-tongue-winking-eye",
         "stuck-out-tongue-and-tightly-closed-eyes": "stuck-out-tongue-closed-eye",
         "face-screaming-in-fear": "fear",
-        "red-heart": "heart"
+        "red-heart": "heart",
+        "white-medium-star": "star",
+        "shooting-star": "stars"
     },
     "CLOCK_MAPPING": {
         "twelve o’clock": "12",
