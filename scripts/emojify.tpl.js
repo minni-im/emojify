@@ -16,17 +16,17 @@ const unifiedToUnicode = unified => {
 const BY_NAMES = EMOJI_BY_NAMES;
 const BY_UNICODE = EMOJI_BY_UNICODE;
 const ASCII_LIST = EMOJI_ASCII;
-const MASK_BY_PROVIDER = PROVIDERS_MASKS;
+export const MASK_BY_PROVIDER = PROVIDERS_MASKS;
 const SKIN_TONE_MODIFIERS = { "1-2": "1f3fb", "3": "1f3fc", "4": "1f3fd", "5": "1f3fe" , "6": "1f3ff"};
 
-const REGEXP_COLONS = new RegExp("\:([a-zA-Z0-9-_+]+)\:(\:skin-tone-((?:1\-2|[3-6]))\:)?", "g");
+export const REGEXP_COLONS = new RegExp("\:([a-zA-Z0-9-_+]+)\:(\:skin-tone-((?:1\-2|[3-6]))\:)?", "g");
 
 const SURROGATES = Object.keys(BY_UNICODE)
     .map(unicode => unicodeToUnified(unicode))
     .map(unified => unified.replace('*', '\\*'))
     .sort((a, b) => b.length - a.length);
 
-const REGEXP_SURROGATES = new RegExp(`(?:${SURROGATES.join("|")})`, "g");
+export const REGEXP_SURROGATES = new RegExp(`(?:${SURROGATES.join("|")})`, "g");
 
 const ASCII_LIST_ESCAPED = {};
 const SMILEYS = Object.keys(ASCII_LIST)
@@ -38,7 +38,7 @@ const SMILEYS = Object.keys(ASCII_LIST)
         return escaped;
     })
     .map(emoticon => escapeRegexp(emoticon));
-const REGEXP_ASCII = new RegExp(`(^|\\s)(${SMILEYS.join("|")})(?=$|[\\s|\\?\\.,!])`, "g");
+export const REGEXP_ASCII = new RegExp(`(^|\\s)(${SMILEYS.join("|")})(?=$|[\\s|\\?\\.,!])`, "g");
 
 const reverseMap = (map, mapValue = v => v, mapKey = k => k) =>
     Object.keys(map)
@@ -54,7 +54,7 @@ const SHORT_TO_ASCII = reverseMap(ASCII_LIST);
 export const ALL = BY_NAMES;
 export const UNICODE = BY_UNICODE;
 export const ASCII = ASCII_LIST;
-
+export const SKIN_TONE_INDEX = { "1-2": 0, 3: 1, 4: 2, 5: 3, 6: 4 }; 
 /**
  * Standardiztion of all unicode emojis.
  * We first transform all of them to shortNames, and then convert them back
