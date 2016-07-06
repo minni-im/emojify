@@ -5829,7 +5829,7 @@
             "drink",
             "mug"
         ],
-        "shortname": "clinking-beers"
+        "shortname": "beers"
     },
     {
         "index": 809,
@@ -6621,7 +6621,7 @@
             "painting",
             "palette"
         ],
-        "shortname": "artist-palette"
+        "shortname": "art"
     },
     {
         "index": 879,
