@@ -20,10 +20,9 @@
     "assets": "npm run databases && node ./scripts/assets.js",
     "generate": "node ./scripts/generate.js",
     "rebuild": "npm run assets && npm run generate",
-    "build": "npm run generate",
     "test": "jest",
     "babel": "babel ./lib/emojify.js -o ./dist/emojify.browser.js --babelrc false --presets es2015 --compact --minified --comments false",
-    "dist": "npm run build && npm run babel"
+    "dist": "npm run generate && npm run babel"
   },
   "unicode": {
     "source-utf8": "http://www.unicode.org/Public/UNIDATA/EmojiSources.txt",
