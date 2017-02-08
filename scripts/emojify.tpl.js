@@ -54,7 +54,40 @@ const SHORT_TO_ASCII = reverseMap(ASCII_LIST);
 export const ALL = BY_NAMES;
 export const UNICODE = BY_UNICODE;
 export const ASCII = ASCII_LIST;
-export const SKIN_TONE_INDEX = { "1-2": 0, 3: 1, 4: 2, 5: 3, 6: 4 }; 
+export const SKIN_TONE_INDEX = { "1-2": 0, 3: 1, 4: 2, 5: 3, 6: 4 };
+
+/**
+ * Convert all unicode empjis (such as 🚽) to their shortNames equivalent (:toilet:)
+ * @param String some text
+ * @return String converted text
+ */
+export const unicodeToShortName = function(text) {
+    return text.replace(REGEXP_SURROGATES, match => {
+        return `:${BY_UNICODE[unifiedToUnicode(match)]}:` || match
+    });
+}
+
+/**
+ * Convert all shortName emojis (such as :rocket:) to their unicode equivalent (🚀)
+ * @param String some text
+ * @return String converted text
+ */
+export const shortNameToUnicode = function(text) {
+    return text.replace(REGEXP_COLONS, (match, name, skinTone, toneLevel) => {
+        let emoji = BY_NAMES[name];
+        if (skinTone) {
+            toneLevel = parseInt(toneLevel, 10);
+            emoji = BY_NAMES[name].skin_variations[toneLevel - 2];
+            return emoji ? unicodeToUnified(emoji) : match;
+        }
+        if (!emoji) {
+            return match;
+        }
+        return unicodeToUnified(emoji.unicode[1] || emoji.unicode[0]);
+    });
+}
+
+
 /**
  * Standardiztion of all unicode emojis.
  * We first transform all of them to shortNames, and then convert them back
@@ -62,7 +95,7 @@ export const SKIN_TONE_INDEX = { "1-2": 0, 3: 1, 4: 2, 5: 3, 6: 4 };
  * @param String some text
  * @return String normalized text
  */
-export function unifyUnicode(text) {
+export const unifyUnicode = function(text) {
     text = unicodeToShortName(text);
     text = shortNameToUnicode(text);
     return text;
@@ -74,7 +107,7 @@ export function unifyUnicode(text) {
  * @param String some text
  * @return String converted text
  */
-export function shortNameToAscii(text) {
+export const shortNameToAscii = function(text) {
     return text.replace(REGEXP_COLONS,
         (match, name, skinTone, toneLevel) => (
             (SHORT_TO_ASCII[name] && SHORT_TO_ASCII[name][0])
@@ -87,7 +120,7 @@ export function shortNameToAscii(text) {
  * @param String some text
  * @return String converted text
  */
-export function asciiToShortName(text) {
+export const asciiToShortName = function(text) {
     const withParens = [];
     let start = 0;
     let replacement = text.replace(REGEXP_ASCII, (match, before, emoticon, offset) => {
@@ -132,43 +165,13 @@ export function asciiToShortName(text) {
     return replacement;
 }
 
-/**
- * Convert all unicode empjis (such as 🚽) to their shortNames equivalent (:toilet:)
- * @param String some text
- * @return String converted text
- */
-export function unicodeToShortName(text) {
-    return text.replace(REGEXP_SURROGATES, match => {
-        return `:${BY_UNICODE[unifiedToUnicode(match)]}:` || match
-    });
-}
-
-/**
- * Convert all shortName emojis (such as :rocket:) to their unicode equivalent (🚀)
- * @param String some text
- * @return String converted text
- */
-export function shortNameToUnicode(text) {
-    return text.replace(REGEXP_COLONS, (match, name, skinTone, toneLevel) => {
-        let emoji = BY_NAMES[name];
-        if (skinTone) {
-            toneLevel = parseInt(toneLevel, 10);
-            emoji = BY_NAMES[name].skin_variations[toneLevel - 2];
-            return emoji ? unicodeToUnified(emoji) : match;
-        }
-        if (!emoji) {
-            return match;
-        }
-        return unicodeToUnified(emoji.unicode[1] || emoji.unicode[0]);
-    });
-}
 
 /**
  * Return a boolean value depending if text contains or not some emojis
  * @param String some text
  * @return Boolean
  */
-export function containsEmoji(text) {
+export const containsEmoji = function(text) {
     return REGEXP_COLONS.test(text) || REGEXP_SURROGATES.test(text);
 }
 
@@ -181,7 +184,7 @@ export function containsEmoji(text) {
  * @param String some text
  * @return Object structural information regarding detected emojis
  */
-export function extractEmoji(text) {
+export const extractEmoji = function(text) {
     let emojis = {};
 
     // Shortnames
