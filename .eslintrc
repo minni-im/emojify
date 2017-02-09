@@ -1,2 +1,10 @@
+extends:
+  eslint-config-airbnb-base
+
 parser:
   babel-eslint
+
+rules:
+  quotes: [2, "double", "avoid-escape"]
+  indent: ["error", 4]
+  comma-dangle: ["error", "never"]

@@ -1,9 +1,8 @@
-"use strict";
 const fs = require("fs");
 const path = require("path");
-const color = require("colors");
+require("colors");
 
-const { entries, fileExists, emoji: nativeEmoji } = require("./utils");
+const { fileExists, emoji: nativeEmoji } = require("./utils");
 
 // const DICTIONNARY = require("../data/emoji-source.json");
 const DICTIONNARY = require("../data/emoji-list.json");
@@ -22,7 +21,7 @@ const E_BY_NAMES = DICTIONNARY.reduce((dict, emoji) => {
     const name = emoji.shortname;
     const item = dict[name] = {
         unicode: [emoji.unified].concat(emoji.variation || [])
-    }
+    };
     if (emoji.shortnames && emoji.shortnames.length > 1) {
         item.alias = emoji.shortnames;
     }
@@ -32,8 +31,8 @@ const E_BY_NAMES = DICTIONNARY.reduce((dict, emoji) => {
     }
 
     // Checking provider image existance
-    item.mask = PROVIDERS.reduce((mask, {name: providerName, type}, index) => {
-        const localMask = Math.pow(2, index);
+    item.mask = PROVIDERS.reduce((mask, { name: providerName, type }, index) => {
+        const localMask = 2 ** index;
         if (fileExists(path.join(ASSETS_DIR, providerName, type, `${emoji.unified}.${type}`))) {
             mask |= localMask;
         }
@@ -42,11 +41,11 @@ const E_BY_NAMES = DICTIONNARY.reduce((dict, emoji) => {
 
     // Building ASCII based version of the emoji
     if (emoji.text) {
-        emoji.text.forEach(text => E_BY_ASCII[text] = name);
+        emoji.text.forEach((text) => { E_BY_ASCII[text] = name; });
     }
 
     // Building secondary dictionnary, based on unified unicode, and native unified char
-    item.unicode.forEach(unicode => {
+    item.unicode.forEach((unicode) => {
         E_BY_UNIFIED[unicode] = name;
         E_BY_SURROGATES[nativeEmoji(unicode)] = unicode;
     });
@@ -57,9 +56,9 @@ const E_BY_NAMES = DICTIONNARY.reduce((dict, emoji) => {
     return dict;
 }, {});
 
-PROVIDERS.forEach(({name}, index) => PROVIDERS_MASKS[name] = Math.pow(2, index));
+PROVIDERS.forEach(({ name }, index) => { PROVIDERS_MASKS[name] = 2 ** index; });
 
-console.log("Generating library file:".bold,  "lib/emojify.js");
+console.log("Generating library file:".bold, "lib/emojify.js");
 
 fs.writeFileSync(
     path.join(".", "lib", "emojify.js"),

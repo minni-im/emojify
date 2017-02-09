@@ -1326,7 +1326,7 @@
                 "sheet_x": 1,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -1336,7 +1336,7 @@
                 "sheet_x": 1,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -1346,7 +1346,7 @@
                 "sheet_x": 1,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -1356,7 +1356,7 @@
                 "sheet_x": 1,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -1366,7 +1366,7 @@
                 "sheet_x": 1,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -3001,7 +3001,7 @@
                 "sheet_x": 2,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3011,7 +3011,7 @@
                 "sheet_x": 2,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3021,7 +3021,7 @@
                 "sheet_x": 3,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3031,7 +3031,7 @@
                 "sheet_x": 3,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3041,7 +3041,7 @@
                 "sheet_x": 3,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -3232,7 +3232,7 @@
                 "sheet_x": 3,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3242,7 +3242,7 @@
                 "sheet_x": 3,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3252,7 +3252,7 @@
                 "sheet_x": 3,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3262,7 +3262,7 @@
                 "sheet_x": 3,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3272,7 +3272,7 @@
                 "sheet_x": 3,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -3309,7 +3309,7 @@
                 "sheet_x": 3,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3319,7 +3319,7 @@
                 "sheet_x": 3,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3329,7 +3329,7 @@
                 "sheet_x": 3,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3339,7 +3339,7 @@
                 "sheet_x": 3,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3349,7 +3349,7 @@
                 "sheet_x": 3,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -3387,7 +3387,7 @@
                 "sheet_x": 3,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3397,7 +3397,7 @@
                 "sheet_x": 3,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3407,7 +3407,7 @@
                 "sheet_x": 3,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3417,7 +3417,7 @@
                 "sheet_x": 3,
                 "sheet_y": 25,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3427,7 +3427,7 @@
                 "sheet_x": 3,
                 "sheet_y": 26,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -3465,7 +3465,7 @@
                 "sheet_x": 3,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3475,7 +3475,7 @@
                 "sheet_x": 3,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3485,7 +3485,7 @@
                 "sheet_x": 3,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3495,7 +3495,7 @@
                 "sheet_x": 3,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -3505,7 +3505,7 @@
                 "sheet_x": 3,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -8446,7 +8446,7 @@
                 "sheet_x": 8,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -8456,7 +8456,7 @@
                 "sheet_x": 8,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -8466,7 +8466,7 @@
                 "sheet_x": 8,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -8476,7 +8476,7 @@
                 "sheet_x": 8,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -8486,7 +8486,7 @@
                 "sheet_x": 8,
                 "sheet_y": 34,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -9867,7 +9867,7 @@
                 "sheet_x": 10,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9877,7 +9877,7 @@
                 "sheet_x": 10,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9887,7 +9887,7 @@
                 "sheet_x": 10,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9897,7 +9897,7 @@
                 "sheet_x": 10,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9907,7 +9907,7 @@
                 "sheet_x": 10,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -9943,7 +9943,7 @@
                 "sheet_x": 10,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9953,7 +9953,7 @@
                 "sheet_x": 10,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9963,7 +9963,7 @@
                 "sheet_x": 10,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9973,7 +9973,7 @@
                 "sheet_x": 10,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -9983,7 +9983,7 @@
                 "sheet_x": 10,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -10139,7 +10139,7 @@
                 "sheet_x": 10,
                 "sheet_y": 27,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10149,7 +10149,7 @@
                 "sheet_x": 10,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10159,7 +10159,7 @@
                 "sheet_x": 10,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10169,7 +10169,7 @@
                 "sheet_x": 10,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10179,7 +10179,7 @@
                 "sheet_x": 10,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -10215,7 +10215,7 @@
                 "sheet_x": 10,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10225,7 +10225,7 @@
                 "sheet_x": 10,
                 "sheet_y": 34,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10235,7 +10235,7 @@
                 "sheet_x": 10,
                 "sheet_y": 35,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10245,7 +10245,7 @@
                 "sheet_x": 10,
                 "sheet_y": 36,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -10255,7 +10255,7 @@
                 "sheet_x": 10,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -11338,7 +11338,7 @@
         "category": "Skin Tones",
         "sort_order": 1,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -11362,7 +11362,7 @@
         "category": "Skin Tones",
         "sort_order": 2,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -11386,7 +11386,7 @@
         "category": "Skin Tones",
         "sort_order": 3,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -11410,7 +11410,7 @@
         "category": "Skin Tones",
         "sort_order": 4,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -11434,7 +11434,7 @@
         "category": "Skin Tones",
         "sort_order": 5,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -13057,7 +13057,7 @@
                 "sheet_x": 13,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13067,7 +13067,7 @@
                 "sheet_x": 13,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13077,7 +13077,7 @@
                 "sheet_x": 13,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13087,7 +13087,7 @@
                 "sheet_x": 13,
                 "sheet_y": 34,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13097,7 +13097,7 @@
                 "sheet_x": 13,
                 "sheet_y": 35,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13133,7 +13133,7 @@
                 "sheet_x": 13,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13143,7 +13143,7 @@
                 "sheet_x": 13,
                 "sheet_y": 38,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13153,7 +13153,7 @@
                 "sheet_x": 13,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13163,7 +13163,7 @@
                 "sheet_x": 13,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13173,7 +13173,7 @@
                 "sheet_x": 14,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13257,7 +13257,7 @@
                 "sheet_x": 14,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13267,7 +13267,7 @@
                 "sheet_x": 14,
                 "sheet_y": 5,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13277,7 +13277,7 @@
                 "sheet_x": 14,
                 "sheet_y": 6,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13287,7 +13287,7 @@
                 "sheet_x": 14,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13297,7 +13297,7 @@
                 "sheet_x": 14,
                 "sheet_y": 8,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13333,7 +13333,7 @@
                 "sheet_x": 14,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13343,7 +13343,7 @@
                 "sheet_x": 14,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13353,7 +13353,7 @@
                 "sheet_x": 14,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13363,7 +13363,7 @@
                 "sheet_x": 14,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13373,7 +13373,7 @@
                 "sheet_x": 14,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13409,7 +13409,7 @@
                 "sheet_x": 14,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13419,7 +13419,7 @@
                 "sheet_x": 14,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13429,7 +13429,7 @@
                 "sheet_x": 14,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13439,7 +13439,7 @@
                 "sheet_x": 14,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13449,7 +13449,7 @@
                 "sheet_x": 14,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13485,7 +13485,7 @@
                 "sheet_x": 14,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13495,7 +13495,7 @@
                 "sheet_x": 14,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13505,7 +13505,7 @@
                 "sheet_x": 14,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13515,7 +13515,7 @@
                 "sheet_x": 14,
                 "sheet_y": 25,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13525,7 +13525,7 @@
                 "sheet_x": 14,
                 "sheet_y": 26,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13562,7 +13562,7 @@
                 "sheet_x": 14,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13572,7 +13572,7 @@
                 "sheet_x": 14,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13582,7 +13582,7 @@
                 "sheet_x": 14,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13592,7 +13592,7 @@
                 "sheet_x": 14,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13602,7 +13602,7 @@
                 "sheet_x": 14,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13638,7 +13638,7 @@
                 "sheet_x": 14,
                 "sheet_y": 34,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13648,7 +13648,7 @@
                 "sheet_x": 14,
                 "sheet_y": 35,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13658,7 +13658,7 @@
                 "sheet_x": 14,
                 "sheet_y": 36,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13668,7 +13668,7 @@
                 "sheet_x": 14,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13678,7 +13678,7 @@
                 "sheet_x": 14,
                 "sheet_y": 38,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13714,7 +13714,7 @@
                 "sheet_x": 14,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13724,7 +13724,7 @@
                 "sheet_x": 15,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13734,7 +13734,7 @@
                 "sheet_x": 15,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13744,7 +13744,7 @@
                 "sheet_x": 15,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13754,7 +13754,7 @@
                 "sheet_x": 15,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13791,7 +13791,7 @@
                 "sheet_x": 15,
                 "sheet_y": 5,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13801,7 +13801,7 @@
                 "sheet_x": 15,
                 "sheet_y": 6,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13811,7 +13811,7 @@
                 "sheet_x": 15,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13821,7 +13821,7 @@
                 "sheet_x": 15,
                 "sheet_y": 8,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13831,7 +13831,7 @@
                 "sheet_x": 15,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13868,7 +13868,7 @@
                 "sheet_x": 15,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13878,7 +13878,7 @@
                 "sheet_x": 15,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13888,7 +13888,7 @@
                 "sheet_x": 15,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13898,7 +13898,7 @@
                 "sheet_x": 15,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13908,7 +13908,7 @@
                 "sheet_x": 15,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -13944,7 +13944,7 @@
                 "sheet_x": 15,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13954,7 +13954,7 @@
                 "sheet_x": 15,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13964,7 +13964,7 @@
                 "sheet_x": 15,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13974,7 +13974,7 @@
                 "sheet_x": 15,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -13984,7 +13984,7 @@
                 "sheet_x": 15,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -14020,7 +14020,7 @@
                 "sheet_x": 15,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14030,7 +14030,7 @@
                 "sheet_x": 15,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14040,7 +14040,7 @@
                 "sheet_x": 15,
                 "sheet_y": 25,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14050,7 +14050,7 @@
                 "sheet_x": 15,
                 "sheet_y": 26,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14060,7 +14060,7 @@
                 "sheet_x": 15,
                 "sheet_y": 27,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -14602,7 +14602,7 @@
                 "sheet_x": 16,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14612,7 +14612,7 @@
                 "sheet_x": 16,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14622,7 +14622,7 @@
                 "sheet_x": 16,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14632,7 +14632,7 @@
                 "sheet_x": 16,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14642,7 +14642,7 @@
                 "sheet_x": 16,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -14678,7 +14678,7 @@
                 "sheet_x": 16,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14688,7 +14688,7 @@
                 "sheet_x": 16,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14698,7 +14698,7 @@
                 "sheet_x": 16,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14708,7 +14708,7 @@
                 "sheet_x": 16,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14718,7 +14718,7 @@
                 "sheet_x": 16,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -14754,7 +14754,7 @@
                 "sheet_x": 16,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14764,7 +14764,7 @@
                 "sheet_x": 16,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14774,7 +14774,7 @@
                 "sheet_x": 16,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14784,7 +14784,7 @@
                 "sheet_x": 16,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14794,7 +14794,7 @@
                 "sheet_x": 16,
                 "sheet_y": 25,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -14830,7 +14830,7 @@
                 "sheet_x": 16,
                 "sheet_y": 27,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14840,7 +14840,7 @@
                 "sheet_x": 16,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14850,7 +14850,7 @@
                 "sheet_x": 16,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14860,7 +14860,7 @@
                 "sheet_x": 16,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -14870,7 +14870,7 @@
                 "sheet_x": 16,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15006,7 +15006,7 @@
                 "sheet_x": 16,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15016,7 +15016,7 @@
                 "sheet_x": 16,
                 "sheet_y": 38,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15026,7 +15026,7 @@
                 "sheet_x": 16,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15036,7 +15036,7 @@
                 "sheet_x": 16,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15046,7 +15046,7 @@
                 "sheet_x": 17,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15106,7 +15106,7 @@
                 "sheet_x": 17,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15116,7 +15116,7 @@
                 "sheet_x": 17,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15126,7 +15126,7 @@
                 "sheet_x": 17,
                 "sheet_y": 5,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15136,7 +15136,7 @@
                 "sheet_x": 17,
                 "sheet_y": 6,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15146,7 +15146,7 @@
                 "sheet_x": 17,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15182,7 +15182,7 @@
                 "sheet_x": 17,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15192,7 +15192,7 @@
                 "sheet_x": 17,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15202,7 +15202,7 @@
                 "sheet_x": 17,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15212,7 +15212,7 @@
                 "sheet_x": 17,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15222,7 +15222,7 @@
                 "sheet_x": 17,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15258,7 +15258,7 @@
                 "sheet_x": 17,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15268,7 +15268,7 @@
                 "sheet_x": 17,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15278,7 +15278,7 @@
                 "sheet_x": 17,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15288,7 +15288,7 @@
                 "sheet_x": 17,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15298,7 +15298,7 @@
                 "sheet_x": 17,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15334,7 +15334,7 @@
                 "sheet_x": 17,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15344,7 +15344,7 @@
                 "sheet_x": 17,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15354,7 +15354,7 @@
                 "sheet_x": 17,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15364,7 +15364,7 @@
                 "sheet_x": 17,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15374,7 +15374,7 @@
                 "sheet_x": 17,
                 "sheet_y": 25,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15410,7 +15410,7 @@
                 "sheet_x": 17,
                 "sheet_y": 27,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15420,7 +15420,7 @@
                 "sheet_x": 17,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15430,7 +15430,7 @@
                 "sheet_x": 17,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15440,7 +15440,7 @@
                 "sheet_x": 17,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15450,7 +15450,7 @@
                 "sheet_x": 17,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15486,7 +15486,7 @@
                 "sheet_x": 17,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15496,7 +15496,7 @@
                 "sheet_x": 17,
                 "sheet_y": 34,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15506,7 +15506,7 @@
                 "sheet_x": 17,
                 "sheet_y": 35,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15516,7 +15516,7 @@
                 "sheet_x": 17,
                 "sheet_y": 36,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15526,7 +15526,7 @@
                 "sheet_x": 17,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15562,7 +15562,7 @@
                 "sheet_x": 17,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15572,7 +15572,7 @@
                 "sheet_x": 17,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15582,7 +15582,7 @@
                 "sheet_x": 18,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15592,7 +15592,7 @@
                 "sheet_x": 18,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15602,7 +15602,7 @@
                 "sheet_x": 18,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15638,7 +15638,7 @@
                 "sheet_x": 18,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15648,7 +15648,7 @@
                 "sheet_x": 18,
                 "sheet_y": 5,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15658,7 +15658,7 @@
                 "sheet_x": 18,
                 "sheet_y": 6,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15668,7 +15668,7 @@
                 "sheet_x": 18,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15678,7 +15678,7 @@
                 "sheet_x": 18,
                 "sheet_y": 8,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15714,7 +15714,7 @@
                 "sheet_x": 18,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15724,7 +15724,7 @@
                 "sheet_x": 18,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15734,7 +15734,7 @@
                 "sheet_x": 18,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15744,7 +15744,7 @@
                 "sheet_x": 18,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15754,7 +15754,7 @@
                 "sheet_x": 18,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -15862,7 +15862,7 @@
                 "sheet_x": 18,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15872,7 +15872,7 @@
                 "sheet_x": 18,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15882,7 +15882,7 @@
                 "sheet_x": 18,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15892,7 +15892,7 @@
                 "sheet_x": 18,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -15902,7 +15902,7 @@
                 "sheet_x": 18,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -16034,7 +16034,7 @@
                 "sheet_x": 18,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16044,7 +16044,7 @@
                 "sheet_x": 18,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16054,7 +16054,7 @@
                 "sheet_x": 18,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16064,7 +16064,7 @@
                 "sheet_x": 18,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16074,7 +16074,7 @@
                 "sheet_x": 18,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -16110,7 +16110,7 @@
                 "sheet_x": 18,
                 "sheet_y": 35,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16120,7 +16120,7 @@
                 "sheet_x": 18,
                 "sheet_y": 36,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16130,7 +16130,7 @@
                 "sheet_x": 18,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16140,7 +16140,7 @@
                 "sheet_x": 18,
                 "sheet_y": 38,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16150,7 +16150,7 @@
                 "sheet_x": 18,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -16186,7 +16186,7 @@
                 "sheet_x": 19,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16196,7 +16196,7 @@
                 "sheet_x": 19,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16206,7 +16206,7 @@
                 "sheet_x": 19,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16216,7 +16216,7 @@
                 "sheet_x": 19,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16226,7 +16226,7 @@
                 "sheet_x": 19,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -16286,7 +16286,7 @@
                 "sheet_x": 19,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16296,7 +16296,7 @@
                 "sheet_x": 19,
                 "sheet_y": 8,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16306,7 +16306,7 @@
                 "sheet_x": 19,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16316,7 +16316,7 @@
                 "sheet_x": 19,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16326,7 +16326,7 @@
                 "sheet_x": 19,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -16362,7 +16362,7 @@
                 "sheet_x": 19,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16372,7 +16372,7 @@
                 "sheet_x": 19,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16382,7 +16382,7 @@
                 "sheet_x": 19,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16392,7 +16392,7 @@
                 "sheet_x": 19,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16402,7 +16402,7 @@
                 "sheet_x": 19,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -16438,7 +16438,7 @@
                 "sheet_x": 19,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16448,7 +16448,7 @@
                 "sheet_x": 19,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16458,7 +16458,7 @@
                 "sheet_x": 19,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16468,7 +16468,7 @@
                 "sheet_x": 19,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -16478,7 +16478,7 @@
                 "sheet_x": 19,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -17338,7 +17338,7 @@
                 "sheet_x": 20,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -17348,7 +17348,7 @@
                 "sheet_x": 20,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -17358,7 +17358,7 @@
                 "sheet_x": 20,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -17368,7 +17368,7 @@
                 "sheet_x": 20,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -17378,7 +17378,7 @@
                 "sheet_x": 20,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -21737,7 +21737,7 @@
                 "sheet_x": 24,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": false,
                 "has_img_emojione": true
             },
@@ -21747,7 +21747,7 @@
                 "sheet_x": 25,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": false,
                 "has_img_emojione": true
             },
@@ -21757,7 +21757,7 @@
                 "sheet_x": 25,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": false,
                 "has_img_emojione": true
             },
@@ -21767,7 +21767,7 @@
                 "sheet_x": 25,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": false,
                 "has_img_emojione": true
             },
@@ -21777,7 +21777,7 @@
                 "sheet_x": 25,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": false,
                 "has_img_emojione": true
             }
@@ -22029,7 +22029,7 @@
                 "sheet_x": 25,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22039,7 +22039,7 @@
                 "sheet_x": 25,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22049,7 +22049,7 @@
                 "sheet_x": 25,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22059,7 +22059,7 @@
                 "sheet_x": 25,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22069,7 +22069,7 @@
                 "sheet_x": 25,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -22106,7 +22106,7 @@
                 "sheet_x": 25,
                 "sheet_y": 20,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22116,7 +22116,7 @@
                 "sheet_x": 25,
                 "sheet_y": 21,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22126,7 +22126,7 @@
                 "sheet_x": 25,
                 "sheet_y": 22,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22136,7 +22136,7 @@
                 "sheet_x": 25,
                 "sheet_y": 23,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22146,7 +22146,7 @@
                 "sheet_x": 25,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -22182,7 +22182,7 @@
                 "sheet_x": 25,
                 "sheet_y": 26,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22192,7 +22192,7 @@
                 "sheet_x": 25,
                 "sheet_y": 27,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22202,7 +22202,7 @@
                 "sheet_x": 25,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22212,7 +22212,7 @@
                 "sheet_x": 25,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -22222,7 +22222,7 @@
                 "sheet_x": 25,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -24573,7 +24573,7 @@
                 "sheet_x": 28,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24583,7 +24583,7 @@
                 "sheet_x": 28,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24593,7 +24593,7 @@
                 "sheet_x": 28,
                 "sheet_y": 5,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24603,7 +24603,7 @@
                 "sheet_x": 28,
                 "sheet_y": 6,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24613,7 +24613,7 @@
                 "sheet_x": 28,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -24649,7 +24649,7 @@
                 "sheet_x": 28,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24659,7 +24659,7 @@
                 "sheet_x": 28,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24669,7 +24669,7 @@
                 "sheet_x": 28,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24679,7 +24679,7 @@
                 "sheet_x": 28,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24689,7 +24689,7 @@
                 "sheet_x": 28,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -24725,7 +24725,7 @@
                 "sheet_x": 28,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24735,7 +24735,7 @@
                 "sheet_x": 28,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24745,7 +24745,7 @@
                 "sheet_x": 28,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24755,7 +24755,7 @@
                 "sheet_x": 28,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24765,7 +24765,7 @@
                 "sheet_x": 28,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -24873,7 +24873,7 @@
                 "sheet_x": 28,
                 "sheet_y": 24,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24883,7 +24883,7 @@
                 "sheet_x": 28,
                 "sheet_y": 25,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24893,7 +24893,7 @@
                 "sheet_x": 28,
                 "sheet_y": 26,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24903,7 +24903,7 @@
                 "sheet_x": 28,
                 "sheet_y": 27,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24913,7 +24913,7 @@
                 "sheet_x": 28,
                 "sheet_y": 28,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -24949,7 +24949,7 @@
                 "sheet_x": 28,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24959,7 +24959,7 @@
                 "sheet_x": 28,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24969,7 +24969,7 @@
                 "sheet_x": 28,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24979,7 +24979,7 @@
                 "sheet_x": 28,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -24989,7 +24989,7 @@
                 "sheet_x": 28,
                 "sheet_y": 34,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -25025,7 +25025,7 @@
                 "sheet_x": 28,
                 "sheet_y": 36,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25035,7 +25035,7 @@
                 "sheet_x": 28,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25045,7 +25045,7 @@
                 "sheet_x": 28,
                 "sheet_y": 38,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25055,7 +25055,7 @@
                 "sheet_x": 28,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25065,7 +25065,7 @@
                 "sheet_x": 28,
                 "sheet_y": 40,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -25101,7 +25101,7 @@
                 "sheet_x": 29,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25111,7 +25111,7 @@
                 "sheet_x": 29,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25121,7 +25121,7 @@
                 "sheet_x": 29,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25131,7 +25131,7 @@
                 "sheet_x": 29,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25141,7 +25141,7 @@
                 "sheet_x": 29,
                 "sheet_y": 5,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -25177,7 +25177,7 @@
                 "sheet_x": 29,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25187,7 +25187,7 @@
                 "sheet_x": 29,
                 "sheet_y": 8,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25197,7 +25197,7 @@
                 "sheet_x": 29,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25207,7 +25207,7 @@
                 "sheet_x": 29,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -25217,7 +25217,7 @@
                 "sheet_x": 29,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -26094,7 +26094,7 @@
                 "sheet_x": 30,
                 "sheet_y": 7,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26104,7 +26104,7 @@
                 "sheet_x": 30,
                 "sheet_y": 8,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26114,7 +26114,7 @@
                 "sheet_x": 30,
                 "sheet_y": 9,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26124,7 +26124,7 @@
                 "sheet_x": 30,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26134,7 +26134,7 @@
                 "sheet_x": 30,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -26554,7 +26554,7 @@
                 "sheet_x": 30,
                 "sheet_y": 29,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26564,7 +26564,7 @@
                 "sheet_x": 30,
                 "sheet_y": 30,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26574,7 +26574,7 @@
                 "sheet_x": 30,
                 "sheet_y": 31,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26584,7 +26584,7 @@
                 "sheet_x": 30,
                 "sheet_y": 32,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26594,7 +26594,7 @@
                 "sheet_x": 30,
                 "sheet_y": 33,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -26630,7 +26630,7 @@
                 "sheet_x": 30,
                 "sheet_y": 35,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26640,7 +26640,7 @@
                 "sheet_x": 30,
                 "sheet_y": 36,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26650,7 +26650,7 @@
                 "sheet_x": 30,
                 "sheet_y": 37,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26660,7 +26660,7 @@
                 "sheet_x": 30,
                 "sheet_y": 38,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26670,7 +26670,7 @@
                 "sheet_x": 30,
                 "sheet_y": 39,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -26706,7 +26706,7 @@
                 "sheet_x": 31,
                 "sheet_y": 0,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26716,7 +26716,7 @@
                 "sheet_x": 31,
                 "sheet_y": 1,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26726,7 +26726,7 @@
                 "sheet_x": 31,
                 "sheet_y": 2,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26736,7 +26736,7 @@
                 "sheet_x": 31,
                 "sheet_y": 3,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -26746,7 +26746,7 @@
                 "sheet_x": 31,
                 "sheet_y": 4,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -26998,7 +26998,7 @@
                 "sheet_x": 31,
                 "sheet_y": 15,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27008,7 +27008,7 @@
                 "sheet_x": 31,
                 "sheet_y": 16,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27018,7 +27018,7 @@
                 "sheet_x": 31,
                 "sheet_y": 17,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27028,7 +27028,7 @@
                 "sheet_x": 31,
                 "sheet_y": 18,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27038,7 +27038,7 @@
                 "sheet_x": 31,
                 "sheet_y": 19,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -27795,7 +27795,7 @@
                 "sheet_x": 32,
                 "sheet_y": 10,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27805,7 +27805,7 @@
                 "sheet_x": 32,
                 "sheet_y": 11,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27815,7 +27815,7 @@
                 "sheet_x": 32,
                 "sheet_y": 12,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27825,7 +27825,7 @@
                 "sheet_x": 32,
                 "sheet_y": 13,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             },
@@ -27835,7 +27835,7 @@
                 "sheet_x": 32,
                 "sheet_y": 14,
                 "has_img_apple": true,
-                "has_img_google": false,
+                "has_img_google": true,
                 "has_img_twitter": true,
                 "has_img_emojione": true
             }
@@ -28315,7 +28315,7 @@
         "category": "Flags",
         "sort_order": 248,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -28531,7 +28531,7 @@
         "category": "Flags",
         "sort_order": 9,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -30841,7 +30841,7 @@
         "category": "Flags",
         "sort_order": 42,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -33221,7 +33221,7 @@
         "category": "Flags",
         "sort_order": 186,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
@@ -33581,7 +33581,7 @@
         "category": "Flags",
         "sort_order": 256,
         "has_img_apple": true,
-        "has_img_google": false,
+        "has_img_google": true,
         "has_img_twitter": true,
         "has_img_emojione": true
     },
