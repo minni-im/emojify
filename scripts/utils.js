@@ -1,4 +1,3 @@
-"use strict";
 const fs = require("fs");
 const path = require("path");
 const request = require("request");
@@ -18,13 +17,13 @@ module.exports = {
     },
 
     entries: function* entries(obj) {
-        for (let key of Object.keys(obj)) {
+        for (const key of Object.keys(obj)) {
             yield [key, obj[key]];
         }
     },
 
     async(makeGenerator) {
-        return function(...args) {
+        return function (...args) {
             const generator = makeGenerator.apply(this, args);
             function handle(result) {
                 if (result.done) {
@@ -36,7 +35,7 @@ module.exports = {
                 );
             }
             return handle(generator.next());
-        }
+        };
     },
 
     emoji(codepointsAsString) {
@@ -46,10 +45,22 @@ module.exports = {
         );
     },
 
+    unifiedToUnicode(unified) {
+        const codepoints = [];
+        for (const char of unified) {
+            let point = char.codePointAt(0).toString(16);
+            if (point.length < 4) {
+                point = `0000${point}`.slice(-4);
+            }
+            codepoints.push(point);
+        }
+        return codepoints.join("-");
+    },
+
     download(url, filePath, dryRun = false) {
         return new Promise((resolve, reject) => {
             request.get({ url, encoding: null })
-                .on("response", response => {
+                .on("response", (response) => {
                     if (response.statusCode === 404) {
                         return reject(new Error(`Error 404: ${url}`));
                     }
@@ -70,16 +81,15 @@ module.exports = {
             if (size) {
                 size--;
                 const result = new Promise((resolve, reject) => {
-                    resolve(fn(...args))
+                    resolve(fn(...args));
                 });
                 result.then(release, release);
                 return result;
-            } else {
-                return new Promise(resolve => {
-                    queue.push({ resolve, fn, args });
-                })
             }
-        }
+            return new Promise((resolve) => {
+                queue.push({ resolve, fn, args });
+            });
+        };
 
         const release = () => {
             size++;
@@ -87,10 +97,10 @@ module.exports = {
                 const { resolve, fn, args } = queue.shift();
                 resolve(run(fn, args));
             }
-        }
+        };
 
-        return function(...args) {
+        return function (...args) {
             return run(fn, args);
-        }
+        };
     }
-}
+};

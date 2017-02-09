@@ -31,7 +31,6 @@
     "varation_selector2": "http://unicode.org/reports/tr28/tr28-3.html#13_7_variation_selectors",
     "hangout_from_gmail": "https://ssl.gstatic.com/chat/emoji/emoji-d3bd0af9cdabcdfe9dc3f0666041fd06.png"
   },
-
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-eslint": "^7.1.1",
@@ -44,6 +43,7 @@
     "eslint": "^3.15.0",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
+    "fontkit": "^1.5.2",
     "glob": "^7.0.3",
     "jest-cli": "^18.1.0",
     "jsdom": "^9.2.1",
