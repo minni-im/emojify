@@ -11,13 +11,13 @@ module.exports = [
             return `https://raw.githubusercontent.com/Ranks/emojione/master/assets/svg/${name}.svg`;
         }
     },
-    {
-        name: "apple",
-        type: "png",
-        url(name) {
-            return `https://raw.githubusercontent.com/iamcal/emoji-data/master/img-apple-160/${name}.png`;
-        }
-    },
+    // {
+    //     name: "apple",
+    //     type: "png",
+    //     url(name) {
+    //         return `https://raw.githubusercontent.com/iamcal/emoji-data/master/img-apple-160/${name}.png`;
+    //     }
+    // },
     {
         name: "twitter",
         type: "svg",
