@@ -1,7 +1,6 @@
 {
   "name": "@minni-im/emojify",
   "version": "0.2.0",
-  "private": "true",
   "main": "emojify.js",
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
   "description": "Emoji for the win. Name and unicode conversions",
