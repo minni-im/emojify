@@ -1,37 +1,53 @@
 {
   "name": "@minni-im/emojify",
-  "version": "0.2.0",
-  "main": "emojify.js",
+  "version": "1.0.0",
+  "main": "lib/emojify.js",
+  "browser": "dist/emojify.browser.js",
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
   "description": "Emoji for the win. Name and unicode conversions",
-  "homepage": "https://github.com/roulotte/emojify",
+  "homepage": "https://github.com/minni-im/emojify",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/roulotte/emojify.git"
+    "url": "https://github.com/minni-im/emojify.git"
   },
   "bugs": {
-    "url": "https://github.com/roulotte/emojify/issues"
+    "url": "https://github.com/minni-im/emojify/issues"
   },
   "scripts": {
-    "server": "python -m SimpleHTTPServer 8000"
+    "databases": "sh ./scripts/databases.sh",
+    "assets": "npm run databases && node ./scripts/assets.js",
+    "build-node": "node ./scripts/generate.js",
+    "test": "jest --runInBand",
+    "build-browser": "babel ./lib/emojify.js -o ./dist/emojify.browser.js --no-babelrc --presets=es2015 --compact --minified --no-comments",
+    "dist": "npm run build-node && npm run build-browser",
+    "rebuild": "npm run assets && npm run dist"
   },
   "unicode": {
+    "source-utf8": "http://www.unicode.org/Public/UNIDATA/EmojiSources.txt",
+    "source-utf8-variation": "http://unicode.org/Public/UNIDATA/StandardizedVariants.txt",
     "url": "http://www.unicode.org/~scherer/emoji4unicode/snapshot/full.html",
     "varation_selector": "http://www.unicode.org/L2/L2011/11438-emoji-var.pdf",
     "varation_selector2": "http://unicode.org/reports/tr28/tr28-3.html#13_7_variation_selectors",
     "hangout_from_gmail": "https://ssl.gstatic.com/chat/emoji/emoji-d3bd0af9cdabcdfe9dc3f0666041fd06.png"
   },
-  "dependencies": {},
   "devDependencies": {
-    "gulp": "~3.8.7",
-    "gulp-browserify": "^0.5.0",
-    "gulp-git": "~0.4.3",
-    "gulp-rename": "^1.2.0",
-    "gulp-rimraf": "~0.1.0",
-    "gulp-uglify": "~0.3.1",
-    "gulp-util": "~3.0.0",
-    "request": "2.34.0",
-    "through2": "~0.5.1"
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2015-node6": "^0.4.0",
+    "cli-table": "^0.3.1",
+    "colors": "^1.1.2",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "fontkit": "^1.5.2",
+    "glob": "^7.0.3",
+    "jest-cli": "^18.1.0",
+    "jsdom": "^9.2.1",
+    "request": "^2.69.0",
+    "rimraf": "^2.5.2"
   }
 }
