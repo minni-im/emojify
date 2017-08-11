@@ -7,10 +7,15 @@ const GENERATE_NAME_LIST = process.argv.includes("--generate-names");
 const SKIN_TONE_MODIFIERS = ["1f3fb", "1f3fc", "1f3fd", "1f3fe", "1f3ff"];
 
 const { emoji: unicodify } = require("./utils");
-const { BASIC: BASIC_REPLACEMENTS, CLOCK_MAPPING, KEYCAP, COUNTRIES } = require("../data/replacement.json");
+const {
+    BASIC: BASIC_REPLACEMENTS,
+    CLOCK_MAPPING,
+    KEYCAP,
+    COUNTRIES
+} = require("../data/replacement.json");
 const EMOJI_TEXT = require("../data/emoji-text.json");
 
-const source = fs.readFileSync("./full-emoji-list.html");
+const source = fs.readFileSync("./emoji-list.html");
 const document = jsdom(source);
 
 const ROWS = document.querySelectorAll("tr");
@@ -25,10 +30,10 @@ for (const row of ROWS) {
     const indexCell = row.children[0];
     const codeCell = row.children[1];
     const nameCell = row.children[2];
-    const keywordsCell = row.children[4];
+    const keywordsCell = row.children[3];
 
     const index = parseInt(indexCell.textContent, 10);
-    const name = nameCell.childNodes[0].textContent.trim();
+    const name = nameCell.childNodes[0].textContent.trim().replace("⊛ ", "");
     const keywords = keywordsCell.textContent.split(" | ");
 
     const unified = codeCell.querySelector("a").name.replace(/_/g, "-");
@@ -49,8 +54,10 @@ for (const row of ROWS) {
 
     // ===== Skin variations
     if (name.endsWith("skin tone") && !keywords.includes("skin tone")) {
-        const cleanUnified = SKIN_TONE_MODIFIERS
-            .reduce((e, tone) => e.replace(`-${tone}`, ""), emoji.unified);
+        const cleanUnified = SKIN_TONE_MODIFIERS.reduce(
+            (e, tone) => e.replace(`-${tone}`, ""),
+            emoji.unified
+        );
         const parentEmoji = BY_UNIFIED[cleanUnified];
         if (!parentEmoji) {
             console.error(`Missing emoji: ${cleanUnified} (detected from ${emoji.unified})`);
@@ -70,7 +77,7 @@ for (const row of ROWS) {
     let shortnames;
 
     /* Keycap numbers */
-    if ((/^keycap/i).test(name)) {
+    if (/^keycap/i.test(name)) {
         const [keycap, number] = name.split(/: | /);
         shortname = KEYCAP[number.toLowerCase()];
     }
@@ -96,10 +103,9 @@ for (const row of ROWS) {
         if (eName.includes(",")) {
             shortname = eName.toLowerCase().split(", ").map(w => w.trim()).join("-");
             shortnames = [
-                [
-                    cat.split(" ")[0],
-                    shortname.split("-").map(w => w[0]).join("")
-                ].join("-").toLowerCase()
+                [cat.split(" ")[0], shortname.split("-").map(w => w[0]).join("")]
+                    .join("-")
+                    .toLowerCase()
             ];
         }
     }
@@ -126,7 +132,6 @@ for (const row of ROWS) {
     if (name === "eight-spoked asterisk") {
         shortname = name;
     }
-
 
     // ===== IF we don't have yet a shortname, bunch of fallbacks
     /* Shortname based on single keyword */
@@ -171,6 +176,9 @@ LIST.forEach((emoji) => {
 if (!DRY_RUN) {
     fs.writeFileSync("./data/emoji-list.json", JSON.stringify(LIST, null, 4));
     if (GENERATE_NAME_LIST) {
-        fs.writeFileSync("./data/emoji-name.txt", `${(LIST.map(e => `${unicodify(e.unified)};${e.unified};${e.shortname}`).join("\n"))}`);
+        fs.writeFileSync(
+            "./data/emoji-name.txt",
+            `${LIST.map(e => `${unicodify(e.unified)};${e.unified};${e.shortname}`).join("\n")}`
+        );
     }
 }

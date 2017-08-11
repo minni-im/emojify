@@ -1,14 +1,12 @@
 module.exports = [
     {
         name: "emojione",
-        type: "svg",
+        type: "png",
         url(name) {
-            name = name
-                // zero width jointure (zwj) are not present of filename
-                .replace(/\-200d/g, "")
+            return `https://raw.githubusercontent.com/emojione/emojione-assets/master/png/128/${name // zero width jointure (zwj) are not present of filename
+                .replace(/-200d/g, "")
                 // variation selector 16 are also removed from filename
-                .replace(/\-fe0f/g, "");
-            return `https://raw.githubusercontent.com/Ranks/emojione/master/assets/svg/${name}.svg`;
+                .replace(/-fe0f/g, "")}.png`;
         }
     },
     {
