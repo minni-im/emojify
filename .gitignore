@@ -6,3 +6,7 @@ npm-debug.log
 .vscode/
 
 data/twemoji
+data/emoji-sequences.txt
+data/emoji-test.txt
+data/emoji-zwj-sequences.txt
+data/emoji.txt
