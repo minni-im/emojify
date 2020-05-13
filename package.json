@@ -1,10 +1,10 @@
 {
   "name": "@minni-im/emojify",
-  "version": "1.0.0",
+  "version": "2.0.0-beta.1",
   "main": "lib/emojify.js",
   "browser": "dist/emojify.browser.js",
   "author": "Benoit Charbonnier <benoit.charbonnier@gmail.com>",
-  "description": "Emoji for the win. Name and unicode conversions",
+  "description": "Emoji for the everyone, everywhere. Name and unicode conversions",
   "homepage": "https://github.com/minni-im/emojify",
   "license": "MIT",
   "repository": {
@@ -15,39 +15,29 @@
     "url": "https://github.com/minni-im/emojify/issues"
   },
   "scripts": {
-    "databases": "sh ./scripts/databases.sh",
-    "assets": "npm run databases && node ./scripts/assets.js",
-    "build-node": "node ./scripts/generate.js",
-    "test": "jest --runInBand",
-    "build-browser": "babel ./lib/emojify.js -o ./dist/emojify.browser.js --no-babelrc --presets=es2015 --compact --minified --no-comments",
-    "dist": "npm run build-node && npm run build-browser",
-    "rebuild": "npm run assets && npm run dist"
-  },
-  "unicode": {
-    "source-utf8": "http://www.unicode.org/Public/UNIDATA/EmojiSources.txt",
-    "source-utf8-variation": "http://unicode.org/Public/UNIDATA/StandardizedVariants.txt",
-    "url": "http://www.unicode.org/~scherer/emoji4unicode/snapshot/full.html",
-    "varation_selector": "http://www.unicode.org/L2/L2011/11438-emoji-var.pdf",
-    "varation_selector2": "http://unicode.org/reports/tr28/tr28-3.html#13_7_variation_selectors",
-    "hangout_from_gmail": "https://ssl.gstatic.com/chat/emoji/emoji-d3bd0af9cdabcdfe9dc3f0666041fd06.png"
+    "assets:apple": "mkdir -p assets/apple/png && node ./scripts/apple-extractor.mjs",
+    "assets:twemoji": "degit https://github.com/twitter/twemoji.git ./data/twemoji && mkdir -p assets/twemoji/svg && cp -R data/twemoji/assets/svg assets/twemoji && rm -Rf ./data/twemoji",
+    "assets": "npm run assets:apple && npm run assets:twemoji",
+    "build": "node ./scripts/build.mjs",
+    "test": "jest --runInBand"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-eslint": "^7.1.1",
-    "babel-jest": "^18.0.0",
-    "babel-polyfill": "^6.22.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-es2015-node6": "^0.4.0",
-    "cli-table": "^0.3.1",
-    "colors": "^1.1.2",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^11.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "fontkit": "^1.5.2",
-    "glob": "^7.0.3",
-    "jest-cli": "^18.1.0",
-    "jsdom": "^9.2.1",
-    "request": "^2.69.0",
-    "rimraf": "^2.5.2"
+    "@rollup/plugin-commonjs": "11.1.0",
+    "@rollup/plugin-node-resolve": "7.1.3",
+    "@rollup/plugin-replace": "2.3.2",
+    "degit": "2.8.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "3.1.3",
+    "fontkit": "^1.8.1",
+    "jest-cli": "^26.0.1",
+    "jsdom": "^16.2.2",
+    "kleur": "^3.0.3",
+    "node-fetch": "^2.6.0",
+    "prettier": "2.0.5",
+    "rollup": "^2.9.0",
+    "rollup-plugin-terser": "5.3.0",
+    "unicode-13.0.0": "0.8.0"
   }
 }

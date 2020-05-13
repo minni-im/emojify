@@ -1,4 +1,3 @@
-emojify
-=======
+# emojify
 
-Emoji for the win !
+Emoji for everyone, everywhere !
