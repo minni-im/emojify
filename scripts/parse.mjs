@@ -164,6 +164,7 @@ const parseTest = async (sequences, zwjSequences) => {
 
 		const name = extractCLDRName.exec(data[1].trim())[1];
 		let shortname = name.replace(/[:,]?\s/g, "-");
+		// For some emoji, we already know which shortname they should have.
 		shortname = NAME_MAPPINGS[shortname] || shortname;
 
 		function registerEmoji() {
@@ -178,8 +179,8 @@ const parseTest = async (sequences, zwjSequences) => {
 			};
 		}
 
-		// INFO: Here starts the tedious process of refining each emoji shortname
-		// ======================================================================
+		// Here starts the tedious process of refining each emoji shortname
+		// ================================================================
 
 		/* Keycap */
 		if (
@@ -197,6 +198,12 @@ const parseTest = async (sequences, zwjSequences) => {
 			shortname = `clock${CLOCK[name]}`;
 			registerEmoji();
 			continue;
+		}
+
+		/* Ending with `-face` usecase
+		 * we keep only 'animal'-face, and remove all other one. */
+		if (shortname.endsWith("-face") && !subgroup.startsWith("animal")) {
+			shortname = shortname.replace(/-face$/, "");
 		}
 
 		/* Flags: converting shortname to countrycodes */
@@ -228,6 +235,10 @@ const parseTest = async (sequences, zwjSequences) => {
 					.join("")}`;
 			}
 		}
+
+		// We tried all the 'it makes sense' conversion, let's brute force with
+		// regexp replacement and in between text replacement and full replacement.
+		// =====================================================================
 
 		/* Regular Expression mappings to transform names */
 		for (const [re, replacement] of REGEX_MAPPINGS) {

@@ -2,6 +2,8 @@ import kleur from "kleur";
 import fetch from "node-fetch";
 import { promises as fs } from "fs";
 
+const SKIP_DOWNLOAD = process.argv.includes("--skip-download");
+
 const resources = {
 	emoji: "https://unicode.org/Public/13.0.0/ucd/emoji/emoji-data.txt",
 	"emoji-sequences":
@@ -21,6 +23,30 @@ async function* getResources(resources) {
 
 async function download() {
 	console.log(kleur.bold("Downloading emoji-data resource files"));
+	if (SKIP_DOWNLOAD) {
+		const exists = await Promise.all(
+			Object.keys(resources).map((name) =>
+				fs.access(`./data/${name}.txt`).then(
+					() => true,
+					() => false,
+				),
+			),
+		);
+		if (exists.some((stat) => !stat)) {
+			console.log(
+				kleur.cyan(
+					"Download skipping cancelled, resources files not detected.",
+				),
+			);
+		} else {
+			console.log(
+				kleur.cyan(
+					"Download skipped, using already downloaded resources.",
+				),
+			);
+			return;
+		}
+	}
 	for await (let [type, content] of getResources(resources)) {
 		await fs.writeFile(`./data/${type}.txt`, content);
 	}

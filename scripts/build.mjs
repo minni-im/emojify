@@ -3,9 +3,13 @@ import parse from "./parse.mjs";
 import generate from "./generate.mjs";
 
 (async () => {
-	await download();
-	console.log("");
-	await parse();
-	console.log("");
-	await generate();
+	try {
+		await download();
+		console.log("");
+		await parse();
+		console.log("");
+		await generate();
+	} catch (err) {
+		console.error(err);
+	}
 })();
