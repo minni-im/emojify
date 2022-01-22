@@ -43,7 +43,7 @@
     "fontkit": "^1.8.1",
     "jest-cli": "^26.0.1",
     "kleur": "^3.0.3",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "prettier": "2.0.5",
     "rollup": "^2.9.0",
     "rollup-plugin-terser": "5.3.0"
